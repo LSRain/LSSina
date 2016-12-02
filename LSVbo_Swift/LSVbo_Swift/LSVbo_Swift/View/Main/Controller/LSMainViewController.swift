@@ -27,6 +27,8 @@ class LSMainViewController: UITabBarController {
         /// 使用自定义的tabBar
         let tab = LSTabBar()
         setValue(tab, forKey: "tabBar")
+        /// 设置代理
+        tab.LSDelegate = self
     }
     
     
@@ -44,4 +46,11 @@ class LSMainViewController: UITabBarController {
         addChildViewController(vc)
     }
 
+}
+
+/// extension
+extension LSMainViewController: LSTabBarDelegate{
+    func composeButtonClick() {
+        print("主控制器监听到撰写按钮点击")
+    }
 }

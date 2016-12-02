@@ -8,8 +8,15 @@
 
 import UIKit
 
+/// 声明代理
+protocol LSTabBarDelegate: NSObjectProtocol {
+    func composeButtonClick()
+}
+
 class LSTabBar: UITabBar {
 
+    /// 代理属性
+    weak var LSDelegate: LSTabBarDelegate?
     /// 懒加载撰写按钮 - 提高性能
      private lazy var composeButton: UIButton = {
         let btn = UIButton(imageName: "tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button", target: self, action: #selector(btnClick))
@@ -17,7 +24,7 @@ class LSTabBar: UITabBar {
     }()
     
     func btnClick(){
-        print("btnClick...")
+        LSDelegate?.composeButtonClick()
     }
     
     /// 布局子控件 - compose的frame
