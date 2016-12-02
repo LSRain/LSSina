@@ -15,6 +15,7 @@
 		514F2FFB1DF160B600846163 /* LSMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FFA1DF160B600846163 /* LSMessageViewController.swift */; };
 		514F2FFD1DF160DA00846163 /* LSDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FFC1DF160DA00846163 /* LSDiscoverViewController.swift */; };
 		514F2FFF1DF160EB00846163 /* LSProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FFE1DF160EB00846163 /* LSProfileViewController.swift */; };
+		514F30031DF1763F00846163 /* LSTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30021DF1763F00846163 /* LSTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		514F2FFA1DF160B600846163 /* LSMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSMessageViewController.swift; sourceTree = "<group>"; };
 		514F2FFC1DF160DA00846163 /* LSDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSDiscoverViewController.swift; sourceTree = "<group>"; };
 		514F2FFE1DF160EB00846163 /* LSProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSProfileViewController.swift; sourceTree = "<group>"; };
+		514F30021DF1763F00846163 /* LSTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		514F2FEB1DF09E3B00846163 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				514F30021DF1763F00846163 /* LSTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				514F2FF71DF1608700846163 /* LSMainViewController.swift in Sources */,
 				514F2FFB1DF160B600846163 /* LSMessageViewController.swift in Sources */,
 				514F2FFF1DF160EB00846163 /* LSProfileViewController.swift in Sources */,
+				514F30031DF1763F00846163 /* LSTabBar.swift in Sources */,
 				514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */,
 				514F2FFD1DF160DA00846163 /* LSDiscoverViewController.swift in Sources */,
 				514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */,

@@ -9,6 +9,8 @@
 import UIKit
 
 class LSMainViewController: UITabBarController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,10 @@ class LSMainViewController: UITabBarController {
         addChildViewController(vc: LSMessageViewController(), title: "消息", imageName: "tabbar_message_center")
         addChildViewController(vc: LSDiscoverViewController(), title: "发现", imageName: "tabbar_discover")
         addChildViewController(vc: LSMessageViewController(), title: "我", imageName: "tabbar_profile")
+        
+        /// 使用自定义的tabBar
+        let tab = LSTabBar()
+        setValue(tab, forKey: "tabBar")
     }
     
     
