@@ -8,12 +8,13 @@
 
 import UIKit
 
-class LSMainViewController: ViewController {
+class LSMainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
