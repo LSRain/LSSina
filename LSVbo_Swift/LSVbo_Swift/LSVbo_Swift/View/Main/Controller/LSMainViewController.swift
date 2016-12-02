@@ -43,7 +43,8 @@ class LSMainViewController: UITabBarController {
         vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : LSThemeColor], for: UIControlState.selected)
         vc.tabBarItem.image = UIImage(named: imageName as String)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         vc.tabBarItem.selectedImage = UIImage(named: imageName.appending("_selected"))?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        addChildViewController(vc)
+        let nav = UINavigationController(rootViewController: vc)
+        addChildViewController(nav)
     }
 
 }
