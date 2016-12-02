@@ -10,8 +10,6 @@ import UIKit
 
 class LSMainViewController: UITabBarController {
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,8 +25,10 @@ class LSMainViewController: UITabBarController {
         /// 使用自定义的tabBar
         let tab = LSTabBar()
         setValue(tab, forKey: "tabBar")
-        /// 设置代理
-        tab.LSDelegate = self
+        /// 实例化闭包
+        tab.closure = {
+            print("主控制器监听到撰写按钮点击")
+        }
     }
     
     
@@ -46,11 +46,4 @@ class LSMainViewController: UITabBarController {
         addChildViewController(vc)
     }
 
-}
-
-/// extension
-extension LSMainViewController: LSTabBarDelegate{
-    func composeButtonClick() {
-        print("主控制器监听到撰写按钮点击")
-    }
 }

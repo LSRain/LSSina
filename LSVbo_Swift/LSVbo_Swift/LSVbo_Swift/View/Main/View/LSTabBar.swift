@@ -8,15 +8,10 @@
 
 import UIKit
 
-/// 声明代理
-protocol LSTabBarDelegate: NSObjectProtocol {
-    func composeButtonClick()
-}
-
 class LSTabBar: UITabBar {
 
-    /// 代理属性
-    weak var LSDelegate: LSTabBarDelegate?
+    /// 定义闭包
+    var closure: (()->())?
     /// 懒加载撰写按钮 - 提高性能
      private lazy var composeButton: UIButton = {
         let btn = UIButton(imageName: "tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button", target: self, action: #selector(btnClick))
@@ -24,7 +19,8 @@ class LSTabBar: UITabBar {
     }()
     
     func btnClick(){
-        LSDelegate?.composeButtonClick()
+        /// 执行闭包
+        closure!()
     }
     
     /// 布局子控件 - compose的frame
@@ -56,7 +52,6 @@ class LSTabBar: UITabBar {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-        super.init(coder: aDecoder)
         /// 在这里也调用setupUI()目的是如果使用xib价值，那么同样是可以被调用的
 //        setupUI()
     }
