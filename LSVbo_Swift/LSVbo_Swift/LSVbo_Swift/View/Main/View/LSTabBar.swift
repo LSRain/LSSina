@@ -11,7 +11,7 @@ import UIKit
 class LSTabBar: UITabBar {
 
     /// 懒加载撰写按钮 - 提高性能
-     lazy var composeButton: UIButton = {
+     private lazy var composeButton: UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: UIControlState.normal)
         btn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: UIControlState.highlighted)
@@ -22,10 +22,24 @@ class LSTabBar: UITabBar {
     }()
     
     /// 布局子控件 - compose的frame
-    override func layoutSubviews() {
+     override func layoutSubviews() {
         super.layoutSubviews()
         composeButton.center.x = frame.size.width * 0.5
         composeButton.center.y = frame.size.height * 0.5
+        var index: CGFloat = 0
+        /// 需要修改系统的UITabBarButton的宽
+        for btn in subviews {
+            let width = frame.size.width * 0.2
+            if btn.isKind(of: NSClassFromString("UITabBarButton")!){
+                btn.frame.size.width = width
+                btn.frame.origin.x = index * width
+                index += 1
+                /// 需要跳过中间的撰写按钮
+                if index == 2 {
+                    index += 1
+                }
+            }
+        }
     }
     
     override init(frame: CGRect) {
