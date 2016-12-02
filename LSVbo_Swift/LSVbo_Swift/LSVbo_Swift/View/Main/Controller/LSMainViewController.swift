@@ -15,22 +15,27 @@ class LSMainViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.white
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
+        /// 添加子控制器
+        addChildViewController(vc: LSHomeViewController(), title: "首页", imageName: "tabbar_home")
+        addChildViewController(vc: LSMessageViewController(), title: "消息", imageName: "tabbar_message_center")
+        addChildViewController(vc: LSDiscoverViewController(), title: "发现", imageName: "tabbar_discover")
+        addChildViewController(vc: LSMessageViewController(), title: "我", imageName: "tabbar_profile")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    /// 设置子控制器
+    ///
+    /// - Parameters:
+    ///   - vc: 目标控制器
+    ///   - title: 控制器title
+    ///   - imageName: tabBarItem图片名
+    private func addChildViewController(vc: UIViewController, title: NSString, imageName: NSString) {
+        vc.title = title as String
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.orange], for: UIControlState.selected)
+        vc.tabBarItem.image = UIImage(named: imageName as String)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        vc.tabBarItem.selectedImage = UIImage(named: imageName.appending("_selected"))?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        addChildViewController(vc)
     }
-    */
 
 }
