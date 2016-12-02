@@ -17,6 +17,7 @@
 		514F2FFF1DF160EB00846163 /* LSProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FFE1DF160EB00846163 /* LSProfileViewController.swift */; };
 		514F30031DF1763F00846163 /* LSTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30021DF1763F00846163 /* LSTabBar.swift */; };
 		514F30051DF1DAD100846163 /* LSCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30041DF1DAD100846163 /* LSCommon.swift */; };
+		514F30081DF1DF1F00846163 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30071DF1DF1F00846163 /* Extension+UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		514F2FFE1DF160EB00846163 /* LSProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSProfileViewController.swift; sourceTree = "<group>"; };
 		514F30021DF1763F00846163 /* LSTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTabBar.swift; sourceTree = "<group>"; };
 		514F30041DF1DAD100846163 /* LSCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSCommon.swift; sourceTree = "<group>"; };
+		514F30071DF1DF1F00846163 /* Extension+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		514F2FDE1DF09E3B00846163 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				514F30061DF1DF0A00846163 /* Extension */,
 				514F30041DF1DAD100846163 /* LSCommon.swift */,
 			);
 			path = Tools;
@@ -287,6 +290,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		514F30061DF1DF0A00846163 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				514F30071DF1DF1F00846163 /* Extension+UIButton.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +378,7 @@
 				514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */,
 				514F2FFD1DF160DA00846163 /* LSDiscoverViewController.swift in Sources */,
 				514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */,
+				514F30081DF1DF1F00846163 /* Extension+UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,14 +12,13 @@ class LSTabBar: UITabBar {
 
     /// 懒加载撰写按钮 - 提高性能
      private lazy var composeButton: UIButton = {
-        let btn = UIButton()
-        btn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: UIControlState.normal)
-        btn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: UIControlState.highlighted)
-        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: UIControlState.normal)
-        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: UIControlState.highlighted)
-        btn.sizeToFit()
+        let btn = UIButton(imageName: "tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button", target: self, action: #selector(btnClick))
         return btn
     }()
+    
+    func btnClick(){
+        print("btnClick...")
+    }
     
     /// 布局子控件 - compose的frame
      override func layoutSubviews() {
