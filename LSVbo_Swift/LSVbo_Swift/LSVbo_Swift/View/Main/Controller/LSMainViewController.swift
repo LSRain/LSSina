@@ -38,7 +38,7 @@ class LSMainViewController: UITabBarController {
     ///   - imageName: tabBarItem图片名
     private func addChildViewController(vc: UIViewController, title: NSString, imageName: NSString) {
         vc.title = title as String
-        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.orange], for: UIControlState.selected)
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : LSThemeColor], for: UIControlState.selected)
         vc.tabBarItem.image = UIImage(named: imageName as String)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         vc.tabBarItem.selectedImage = UIImage(named: imageName.appending("_selected"))?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         addChildViewController(vc)

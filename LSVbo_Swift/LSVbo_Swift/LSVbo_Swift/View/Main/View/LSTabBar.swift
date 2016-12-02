@@ -24,12 +24,12 @@ class LSTabBar: UITabBar {
     /// 布局子控件 - compose的frame
      override func layoutSubviews() {
         super.layoutSubviews()
-        composeButton.center.x = frame.size.width * 0.5
+        composeButton.center.x = LSWidth * 0.5
         composeButton.center.y = frame.size.height * 0.5
         var index: CGFloat = 0
         /// 需要修改系统的UITabBarButton的宽
         for btn in subviews {
-            let width = frame.size.width * 0.2
+            let width = LSWidth * 0.2
             if btn.isKind(of: NSClassFromString("UITabBarButton")!){
                 btn.frame.size.width = width
                 btn.frame.origin.x = index * width
