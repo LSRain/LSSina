@@ -25,7 +25,9 @@ class LSHomeViewController: ViewController {
     }
     
     @objc private func rightBarButtonClick() -> Void {
-        print("rightClick")
+        let pushVC = LSTempViewController()
+        pushVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(pushVC, animated: true)
     }
 
 }

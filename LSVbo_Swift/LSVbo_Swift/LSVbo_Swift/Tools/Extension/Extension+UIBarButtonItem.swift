@@ -17,9 +17,10 @@ extension UIBarButtonItem{
     ///   - imageName: 图片名
     ///   - target: target
     ///   - action: action
-    convenience init(imageName: String, target: Any?, action: Selector) {
+    convenience init(imageName: String? = nil,title: String? = nil, target: Any?, action: Selector) {
         self.init()
-        let btn = UIButton(imageName: imageName, target: target, action: action)
+        
+        let btn = UIButton(imageName: imageName,title: title, target: target, action: action)
         self.customView = btn
     }
 }
