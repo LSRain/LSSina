@@ -18,14 +18,5 @@ class LSTempViewController: UIViewController {
     
     func setupUI() -> Void {
         view.backgroundColor = UIColor.white
-        setNav()
-    }
-    
-    func setNav(){
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "PUSH", target: self, action: #selector(pushClick))
-    }
-
-    func pushClick(){
-        
     }
 }
