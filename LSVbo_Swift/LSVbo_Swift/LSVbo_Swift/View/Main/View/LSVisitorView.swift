@@ -19,7 +19,10 @@ class LSVisitorView: UIView {
         addSubview(circleImageView)
         addSubview(maskImageView)
         addSubview(iconImageView)
-        addSubview(labView)
+        addSubview(messageLabView)
+        addSubview(rigisterButton)
+        addSubview(loginButton)
+        
         /// 布局
         circleImageView.snp_makeConstraints { (make) in
             make.center.equalTo(self)
@@ -30,11 +33,25 @@ class LSVisitorView: UIView {
         iconImageView.snp_makeConstraints { (make) in
             make.center.equalTo(self)
         }
-        labView.snp_makeConstraints { (make) in
+        messageLabView.snp_makeConstraints { (make) in
             make.top.equalTo(maskImageView.snp_bottom).offset(16)
             make.centerX.equalTo(self)
             make.width.equalTo(230)
         }
+        rigisterButton.snp_makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 100, height: 30))
+            make.top.equalTo(messageLabView.snp_bottom).offset(16)
+            make.left.equalTo(messageLabView)
+        }
+        loginButton.snp_makeConstraints { (make) in
+            make.size.equalTo(rigisterButton)
+            make.centerY.equalTo(rigisterButton)
+            make.right.equalTo(messageLabView)
+        }
+    }
+    
+    @objc private func loginBtnClick(){
+        print("register/login click")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,12 +65,24 @@ class LSVisitorView: UIView {
     fileprivate lazy var maskImageView: UIImageView = UIImageView(imageName: "visitordiscover_feed_mask_smallicon")
     /// iconImageView
     fileprivate lazy var iconImageView: UIImageView = UIImageView(imageName: "visitordiscover_feed_image_house")
-    /// 文字
-    fileprivate lazy var labView: UILabel = {
+    /// 消息文字
+    fileprivate lazy var messageLabView: UILabel = {
         let lab = UILabel(text: "如何让我遇见你，在我最美丽的季节。为这，我已在佛前求了五百年", fontSize: LSFontNormalSize, textColor: UIColor.darkGray)
         lab.textAlignment = .center
         lab.numberOfLines = 0
         return lab
+    }()
+    /// 注册按钮
+    fileprivate lazy var rigisterButton: UIButton = {
+        let button = UIButton(backgroundImageName: "common_button_white", title: "注册", target: self, action: #selector(loginBtnClick))
+        button.titleLabel?.font = UIFont.systemFont(ofSize: LSFontNormalSize)
+        return button
+    }()
+    /// 登录按钮
+    fileprivate lazy var loginButton: UIButton = {
+        let button = UIButton(backgroundImageName: "common_button_white", title: "登录", target: self, action: #selector(loginBtnClick))
+        button.titleLabel?.font = UIFont.systemFont(ofSize: LSFontNormalSize)
+        return button
     }()
 }
 

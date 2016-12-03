@@ -22,7 +22,7 @@ class LSVisitorViewController: UIViewController {
     
     private func setupVisitView(){
         let visitView = LSVisitorView()
-        visitView.backgroundColor = LSRandomColor()
+        visitView.backgroundColor = UIColor(white: 237/255, alpha: 1)
         view = visitView
     }
     
