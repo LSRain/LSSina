@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512DF1961DF31A5C009A5B6E /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF1951DF31A5C009A5B6E /* Extension+UIImageView.swift */; };
 		514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCA1DF091EF00846163 /* AppDelegate.swift */; };
 		514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCC1DF091EF00846163 /* ViewController.swift */; };
 		514F2FD21DF091EF00846163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514F2FD11DF091EF00846163 /* Assets.xcassets */; };
@@ -23,9 +24,23 @@
 		514F300F1DF290A400846163 /* LSNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F300E1DF290A400846163 /* LSNavViewController.swift */; };
 		514F30111DF2BE4800846163 /* LSVisitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30101DF2BE4800846163 /* LSVisitorViewController.swift */; };
 		514F30131DF302B700846163 /* LSVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30121DF302B700846163 /* LSVisitorView.swift */; };
+		514F30231DF311B900846163 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30161DF311B900846163 /* Constraint.swift */; };
+		514F30241DF311B900846163 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30171DF311B900846163 /* ConstraintAttributes.swift */; };
+		514F30251DF311B900846163 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30181DF311B900846163 /* ConstraintDescription.swift */; };
+		514F30261DF311B900846163 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30191DF311B900846163 /* ConstraintItem.swift */; };
+		514F30271DF311B900846163 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F301A1DF311B900846163 /* ConstraintMaker.swift */; };
+		514F30281DF311B900846163 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F301B1DF311B900846163 /* ConstraintRelation.swift */; };
+		514F30291DF311B900846163 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F301C1DF311B900846163 /* Debugging.swift */; };
+		514F302A1DF311B900846163 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F301D1DF311B900846163 /* EdgeInsets.swift */; };
+		514F302B1DF311B900846163 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F301E1DF311B900846163 /* LayoutConstraint.swift */; };
+		514F302C1DF311B900846163 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30201DF311B900846163 /* SnapKit.swift */; };
+		514F302D1DF311B900846163 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30211DF311B900846163 /* View+SnapKit.swift */; };
+		514F302E1DF311B900846163 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30221DF311B900846163 /* ViewController+SnapKit.swift */; };
+		514F30301DF3157400846163 /* Extension+UILable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F302F1DF3157400846163 /* Extension+UILable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		512DF1951DF31A5C009A5B6E /* Extension+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F2FCA1DF091EF00846163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514F2FCC1DF091EF00846163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +59,20 @@
 		514F300E1DF290A400846163 /* LSNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNavViewController.swift; sourceTree = "<group>"; };
 		514F30101DF2BE4800846163 /* LSVisitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSVisitorViewController.swift; sourceTree = "<group>"; };
 		514F30121DF302B700846163 /* LSVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSVisitorView.swift; sourceTree = "<group>"; };
+		514F30161DF311B900846163 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		514F30171DF311B900846163 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
+		514F30181DF311B900846163 /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
+		514F30191DF311B900846163 /* ConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintItem.swift; sourceTree = "<group>"; };
+		514F301A1DF311B900846163 /* ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
+		514F301B1DF311B900846163 /* ConstraintRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
+		514F301C1DF311B900846163 /* Debugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
+		514F301D1DF311B900846163 /* EdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
+		514F301E1DF311B900846163 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
+		514F301F1DF311B900846163 /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
+		514F30201DF311B900846163 /* SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapKit.swift; sourceTree = "<group>"; };
+		514F30211DF311B900846163 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
+		514F30221DF311B900846163 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		514F302F1DF3157400846163 /* Extension+UILable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UILable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +135,7 @@
 		514F2FDE1DF09E3B00846163 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				514F30141DF311AA00846163 /* Libs */,
 				514F300B1DF1FA5C00846163 /* Temp */,
 				514F30061DF1DF0A00846163 /* Extension */,
 				514F30041DF1DAD100846163 /* LSCommon.swift */,
@@ -309,6 +339,8 @@
 			children = (
 				514F30071DF1DF1F00846163 /* Extension+UIButton.swift */,
 				514F30091DF1F1F800846163 /* Extension+UIBarButtonItem.swift */,
+				514F302F1DF3157400846163 /* Extension+UILable.swift */,
+				512DF1951DF31A5C009A5B6E /* Extension+UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -319,6 +351,34 @@
 				514F300C1DF1FA6D00846163 /* LSTempViewController.swift */,
 			);
 			path = Temp;
+			sourceTree = "<group>";
+		};
+		514F30141DF311AA00846163 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				514F30151DF311B900846163 /* SnapKit修改版 */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		514F30151DF311B900846163 /* SnapKit修改版 */ = {
+			isa = PBXGroup;
+			children = (
+				514F30161DF311B900846163 /* Constraint.swift */,
+				514F30171DF311B900846163 /* ConstraintAttributes.swift */,
+				514F30181DF311B900846163 /* ConstraintDescription.swift */,
+				514F30191DF311B900846163 /* ConstraintItem.swift */,
+				514F301A1DF311B900846163 /* ConstraintMaker.swift */,
+				514F301B1DF311B900846163 /* ConstraintRelation.swift */,
+				514F301C1DF311B900846163 /* Debugging.swift */,
+				514F301D1DF311B900846163 /* EdgeInsets.swift */,
+				514F301E1DF311B900846163 /* LayoutConstraint.swift */,
+				514F301F1DF311B900846163 /* SnapKit.h */,
+				514F30201DF311B900846163 /* SnapKit.swift */,
+				514F30211DF311B900846163 /* View+SnapKit.swift */,
+				514F30221DF311B900846163 /* ViewController+SnapKit.swift */,
+			);
+			path = "SnapKit修改版";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,21 +452,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514F30231DF311B900846163 /* Constraint.swift in Sources */,
+				514F30271DF311B900846163 /* ConstraintMaker.swift in Sources */,
+				514F302C1DF311B900846163 /* SnapKit.swift in Sources */,
+				514F30241DF311B900846163 /* ConstraintAttributes.swift in Sources */,
 				514F30131DF302B700846163 /* LSVisitorView.swift in Sources */,
+				514F30291DF311B900846163 /* Debugging.swift in Sources */,
+				514F30261DF311B900846163 /* ConstraintItem.swift in Sources */,
 				514F2FF91DF1609D00846163 /* LSHomeViewController.swift in Sources */,
 				514F2FF71DF1608700846163 /* LSMainViewController.swift in Sources */,
 				514F2FFB1DF160B600846163 /* LSMessageViewController.swift in Sources */,
 				514F2FFF1DF160EB00846163 /* LSProfileViewController.swift in Sources */,
 				514F300A1DF1F1F800846163 /* Extension+UIBarButtonItem.swift in Sources */,
+				514F30281DF311B900846163 /* ConstraintRelation.swift in Sources */,
+				514F302E1DF311B900846163 /* ViewController+SnapKit.swift in Sources */,
 				514F300D1DF1FA6D00846163 /* LSTempViewController.swift in Sources */,
 				514F30051DF1DAD100846163 /* LSCommon.swift in Sources */,
+				514F30301DF3157400846163 /* Extension+UILable.swift in Sources */,
 				514F30031DF1763F00846163 /* LSTabBar.swift in Sources */,
 				514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */,
+				512DF1961DF31A5C009A5B6E /* Extension+UIImageView.swift in Sources */,
 				514F2FFD1DF160DA00846163 /* LSDiscoverViewController.swift in Sources */,
+				514F302A1DF311B900846163 /* EdgeInsets.swift in Sources */,
 				514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */,
 				514F300F1DF290A400846163 /* LSNavViewController.swift in Sources */,
+				514F302B1DF311B900846163 /* LayoutConstraint.swift in Sources */,
 				514F30111DF2BE4800846163 /* LSVisitorViewController.swift in Sources */,
 				514F30081DF1DF1F00846163 /* Extension+UIButton.swift in Sources */,
+				514F30251DF311B900846163 /* ConstraintDescription.swift in Sources */,
+				514F302D1DF311B900846163 /* View+SnapKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

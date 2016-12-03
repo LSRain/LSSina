@@ -16,18 +16,49 @@ class LSVisitorView: UIView {
     }
 
     func setupUI() -> Void {
+        addSubview(circleImageView)
+        addSubview(maskImageView)
         addSubview(iconImageView)
-        addConsUSLayout()
+        addSubview(labView)
+        /// 布局
+        circleImageView.snp_makeConstraints { (make) in
+            make.center.equalTo(self)
+        }
+        maskImageView.snp_makeConstraints { (make) in
+            make.center.equalTo(self)
+        }
+        iconImageView.snp_makeConstraints { (make) in
+            make.center.equalTo(self)
+        }
+        labView.snp_makeConstraints { (make) in
+            make.top.equalTo(maskImageView.snp_bottom).offset(16)
+            make.centerX.equalTo(self)
+            make.width.equalTo(230)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    fileprivate lazy var iconImageView: UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_house"))
+    ////////////////////////懒加载控件///////////////////////////////////////////////////
+    /// 星星圆圈
+    fileprivate lazy var circleImageView: UIImageView = UIImageView(imageName: "visitordiscover_feed_image_smallicon")
+    /// 蒙层view
+    fileprivate lazy var maskImageView: UIImageView = UIImageView(imageName: "visitordiscover_feed_mask_smallicon")
+    /// iconImageView
+    fileprivate lazy var iconImageView: UIImageView = UIImageView(imageName: "visitordiscover_feed_image_house")
+    /// 文字
+    fileprivate lazy var labView: UILabel = {
+        let lab = UILabel(text: "如何让我遇见你，在我最美丽的季节。为这，我已在佛前求了五百年", fontSize: LSFontNormalSize, textColor: UIColor.darkGray)
+        lab.textAlignment = .center
+        lab.numberOfLines = 0
+        return lab
+    }()
 }
 
 extension LSVisitorView{
+    
     /// 使用原生的`Layout`布局iconImageView
     func addConsUSLayout() -> Void {
         iconImageView.translatesAutoresizingMaskIntoConstraints = false

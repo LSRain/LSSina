@@ -15,6 +15,11 @@ let LSHeight = UIScreen.main.bounds.height
 /// 颜色相关
 let LSThemeColor = UIColor.orange
 
+/// 字体相关
+let LSFontBigSize: CGFloat = 18
+let LSFontNormalSize: CGFloat = 14
+let LSFontSmallSize: CGFloat = 10
+
 /// 随机颜色
 func LSRandomColor () -> UIColor{
     let r = (CGFloat)(arc4random() % 256)
