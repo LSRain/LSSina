@@ -24,7 +24,18 @@ class LSVisitorViewController: UIViewController {
     private func setupVisitView(){
         visitorView = LSVisitorView()
         visitorView?.backgroundColor = UIColor(white: 237/255, alpha: 1)
+        setupNav()
         view = visitorView
+    }
+    
+    /// 访客视图导航 `注册`、`登录`
+    private func setupNav(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", target: self, action: #selector(loginClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", target: self, action: #selector(loginClick))
+    }
+    
+    @objc private func loginClick(){
+        print("访客视图Nav click")
     }
     
     override func viewDidLoad() {

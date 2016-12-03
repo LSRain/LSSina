@@ -22,7 +22,24 @@ class LSVisitorView: UIView {
             iconImageView.image = UIImage(named: image)
             messageLabView.text = ltitle
             circleImageView.isHidden = true
+        }else{
+            setupCicleImageViewAnimation()
         }
+    }
+    
+    /// 设置`首页`的圆圈动画
+    private func setupCicleImageViewAnimation(){
+        let anim  = CABasicAnimation(keyPath: "transform.rotation")
+        /// 旋转角度
+        anim.toValue = M_PI * 2
+        /// 持续时间 `s`
+        anim.duration = 20
+        /// 播放次数 - `无限大`
+        anim.repeatCount = MAXFLOAT
+        /// 注意，需要取消其结束关闭动画选项 - 默认`true`程序挂起动画停止
+        anim.isRemovedOnCompletion = false
+        /// 添加动画
+        circleImageView.layer.add(anim, forKey: nil)
     }
 
     func setupUI() -> Void {
