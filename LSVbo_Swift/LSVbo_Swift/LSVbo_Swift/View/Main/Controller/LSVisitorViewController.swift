@@ -21,15 +21,13 @@ class LSVisitorViewController: UIViewController {
     }
     
     private func setupVisitView(){
-        let visitView = UIView()
+        let visitView = LSVisitorView()
         visitView.backgroundColor = LSRandomColor()
         view = visitView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
     }
 

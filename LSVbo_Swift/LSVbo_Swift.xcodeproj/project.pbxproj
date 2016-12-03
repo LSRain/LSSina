@@ -22,6 +22,7 @@
 		514F300D1DF1FA6D00846163 /* LSTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F300C1DF1FA6D00846163 /* LSTempViewController.swift */; };
 		514F300F1DF290A400846163 /* LSNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F300E1DF290A400846163 /* LSNavViewController.swift */; };
 		514F30111DF2BE4800846163 /* LSVisitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30101DF2BE4800846163 /* LSVisitorViewController.swift */; };
+		514F30131DF302B700846163 /* LSVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30121DF302B700846163 /* LSVisitorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		514F300C1DF1FA6D00846163 /* LSTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTempViewController.swift; sourceTree = "<group>"; };
 		514F300E1DF290A400846163 /* LSNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNavViewController.swift; sourceTree = "<group>"; };
 		514F30101DF2BE4800846163 /* LSVisitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSVisitorViewController.swift; sourceTree = "<group>"; };
+		514F30121DF302B700846163 /* LSVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSVisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				514F30021DF1763F00846163 /* LSTabBar.swift */,
 				514F300E1DF290A400846163 /* LSNavViewController.swift */,
+				514F30121DF302B700846163 /* LSVisitorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514F30131DF302B700846163 /* LSVisitorView.swift in Sources */,
 				514F2FF91DF1609D00846163 /* LSHomeViewController.swift in Sources */,
 				514F2FF71DF1608700846163 /* LSMainViewController.swift in Sources */,
 				514F2FFB1DF160B600846163 /* LSMessageViewController.swift in Sources */,
