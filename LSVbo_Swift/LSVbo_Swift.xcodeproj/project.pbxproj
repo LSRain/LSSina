@@ -21,6 +21,7 @@
 		514F300A1DF1F1F800846163 /* Extension+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30091DF1F1F800846163 /* Extension+UIBarButtonItem.swift */; };
 		514F300D1DF1FA6D00846163 /* LSTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F300C1DF1FA6D00846163 /* LSTempViewController.swift */; };
 		514F300F1DF290A400846163 /* LSNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F300E1DF290A400846163 /* LSNavViewController.swift */; };
+		514F30111DF2BE4800846163 /* LSVisitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30101DF2BE4800846163 /* LSVisitorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		514F30091DF1F1F800846163 /* Extension+UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		514F300C1DF1FA6D00846163 /* LSTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTempViewController.swift; sourceTree = "<group>"; };
 		514F300E1DF290A400846163 /* LSNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNavViewController.swift; sourceTree = "<group>"; };
+		514F30101DF2BE4800846163 /* LSVisitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSVisitorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				514F2FF61DF1608700846163 /* LSMainViewController.swift */,
+				514F30101DF2BE4800846163 /* LSVisitorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				514F2FFD1DF160DA00846163 /* LSDiscoverViewController.swift in Sources */,
 				514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */,
 				514F300F1DF290A400846163 /* LSNavViewController.swift in Sources */,
+				514F30111DF2BE4800846163 /* LSVisitorViewController.swift in Sources */,
 				514F30081DF1DF1F00846163 /* Extension+UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

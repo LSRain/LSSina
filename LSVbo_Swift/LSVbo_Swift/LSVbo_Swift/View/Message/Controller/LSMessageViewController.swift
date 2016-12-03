@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LSMessageViewController: ViewController {
+class LSMessageViewController: LSVisitorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

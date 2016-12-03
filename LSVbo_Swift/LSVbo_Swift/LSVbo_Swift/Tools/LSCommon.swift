@@ -14,3 +14,11 @@ let LSHeight = UIScreen.main.bounds.height
 
 /// 颜色相关
 let LSThemeColor = UIColor.orange
+
+/// 随机颜色
+func LSRandomColor () -> UIColor{
+    let r = (CGFloat)(arc4random() % 256)
+    let g = (CGFloat)(arc4random() % 256)
+    let b = (CGFloat)(arc4random() % 256)
+    return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
+}

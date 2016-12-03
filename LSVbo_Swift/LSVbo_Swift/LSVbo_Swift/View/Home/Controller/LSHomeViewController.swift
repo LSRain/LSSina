@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LSHomeViewController: ViewController {
+class LSHomeViewController: LSVisitorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

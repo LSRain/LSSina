@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LSDiscoverViewController: ViewController {
+class LSDiscoverViewController: LSVisitorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
