@@ -11,6 +11,7 @@ import UIKit
 class LSVisitorViewController: UIViewController {
 
     let isLogin: Bool = false
+    var visitorView: LSVisitorView?
     
     override func loadView() {
         if isLogin {
@@ -21,9 +22,9 @@ class LSVisitorViewController: UIViewController {
     }
     
     private func setupVisitView(){
-        let visitView = LSVisitorView()
-        visitView.backgroundColor = UIColor(white: 237/255, alpha: 1)
-        view = visitView
+        visitorView = LSVisitorView()
+        visitorView?.backgroundColor = UIColor(white: 237/255, alpha: 1)
+        view = visitorView
     }
     
     override func viewDidLoad() {

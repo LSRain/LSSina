@@ -16,8 +16,20 @@ class LSHomeViewController: LSVisitorViewController {
     }
     
     func setupUI() -> Void {
+        /// 未登录
+        if !isLogin {
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop", target: self, action: #selector(leftBarButtonClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendsearch", target: self, action: #selector(rightBarButtonClick))
+        /// `首页`传入nil显示特定的访客视图
+        visitorView?.setupVisitroViewInfo(imageName: nil, title: nil)
+            return
+        }
+        loadData()
+    }
+    
+    /// 数据请求
+    private func loadData(){
+        
     }
     
     @objc private func leftBarButtonClick() -> Void {

@@ -14,6 +14,16 @@ class LSVisitorView: UIView {
         super.init(frame: frame)
         setupUI()
     }
+    
+    /// 根据外界传入的不同参数内容显示不同模块访客视图信息
+    func setupVisitroViewInfo(imageName: String?, title: String?) -> Void {
+        if let image = imageName, let ltitle = title {
+            /// 进入判断域说明是!`首页`
+            iconImageView.image = UIImage(named: image)
+            messageLabView.text = ltitle
+            circleImageView.isHidden = true
+        }
+    }
 
     func setupUI() -> Void {
         addSubview(circleImageView)
