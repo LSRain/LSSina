@@ -25,6 +25,10 @@ class LSVisitorViewController: UIViewController {
         visitorView = LSVisitorView()
         visitorView?.backgroundColor = UIColor(white: 237/255, alpha: 1)
         setupNav()
+        /// 实例化访客视图的`closure`
+        visitorView?.closure = {[weak self] in
+            self?.loginClick()
+        }
         view = visitorView
     }
     

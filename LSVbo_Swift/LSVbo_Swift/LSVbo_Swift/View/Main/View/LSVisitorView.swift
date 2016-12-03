@@ -9,7 +9,10 @@
 import UIKit
 
 class LSVisitorView: UIView {
-
+    
+    /// 定义闭包 - 用以回传按钮点击事件
+    var closure:(()->())?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -78,7 +81,8 @@ class LSVisitorView: UIView {
     }
     
     @objc private func loginBtnClick(){
-        print("register/login click")
+        /// 执行`closure`
+        closure!()
     }
     
     required init?(coder aDecoder: NSCoder) {
