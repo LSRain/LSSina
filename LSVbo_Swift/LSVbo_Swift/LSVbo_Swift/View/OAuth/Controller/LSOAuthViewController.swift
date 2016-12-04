@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YYModel
 
 class LSOAuthViewController: UIViewController {
     
@@ -69,8 +70,31 @@ extension LSOAuthViewController: UIWebViewDelegate{
         if let u = URLString, u.hasPrefix(LSRedirect) {
             let query = request.url?.query
             let code = query?.substring(from: "code=".endIndex) ?? ""
-            print("code = \(code)")
+            getUserAccount(code: code)
         }
         return true
+    }
+}
+
+/// extension - 网络请求相关接口
+extension LSOAuthViewController{
+    
+    func getUserAccount(code: String) -> Void {
+        let parames = [
+            "client_id": LSClient_id,
+            "client_secret": LSClient_secret,
+            "grant_type": "authorization_code",
+            "code": code,
+            "redirect_uri": LSRedirect
+        ]
+        LSNetworkTools.sharedTools.request(method: .post, URLString: LSTokenURL, parameters: parames, success: { (responseObject) in
+            guard let res = responseObject as?[String: Any] else{
+                return
+            }
+            let userAccountModel = LSUserAccountModel.yy_model(withJSON: res)
+            print("\(userAccountModel)")
+        }) { (error) in
+            print("\(error)")
+        }
     }
 }

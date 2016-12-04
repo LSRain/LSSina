@@ -13,8 +13,12 @@ import UIKit
 let LSOAuthURL = "https://api.weibo.com/oauth2/authorize"
 /// AppKey
 let LSClient_id = "2733381210"
+/// client_secret
+let LSClient_secret = "d30ed57da77dd0a69d873e2c41c43f69"
 /// 应用回调地址
 let LSRedirect = "http://www.lsrain.com"
+/// token请求URL
+let LSTokenURL = "https://api.weibo.com/oauth2/access_token"
 /// 账号和密码 - 这里没有给出具体的账号密码 使用时 您可以将自己的账号和密码在这里设置
 let LSWBUserId = "test@test.com"
 let LSWBPasswd = "Test"

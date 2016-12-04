@@ -26,6 +26,7 @@ class LSNetworkTools: AFHTTPSessionManager {
        
         let tool = LSNetworkTools()
         tool.responseSerializer.acceptableContentTypes?.insert("text/html")
+        tool.responseSerializer.acceptableContentTypes?.insert("text/plain")
         return tool
     }()
     
