@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		512DF1961DF31A5C009A5B6E /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF1951DF31A5C009A5B6E /* Extension+UIImageView.swift */; };
+		512DF2501DF434A4009A5B6E /* LSOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF24F1DF434A4009A5B6E /* LSOAuthViewController.swift */; };
 		514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCA1DF091EF00846163 /* AppDelegate.swift */; };
 		514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCC1DF091EF00846163 /* ViewController.swift */; };
 		514F2FD21DF091EF00846163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514F2FD11DF091EF00846163 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		512DF1951DF31A5C009A5B6E /* Extension+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
+		512DF24F1DF434A4009A5B6E /* LSOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSOAuthViewController.swift; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F2FCA1DF091EF00846163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514F2FCC1DF091EF00846163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		512DF24C1DF43482009A5B6E /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				512DF24D1DF43482009A5B6E /* Controller */,
+				512DF24E1DF43482009A5B6E /* View */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		512DF24D1DF43482009A5B6E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				512DF24F1DF434A4009A5B6E /* LSOAuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		512DF24E1DF43482009A5B6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		514F2FBE1DF091EF00846163 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +172,7 @@
 		514F2FDF1DF09E3B00846163 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				512DF24C1DF43482009A5B6E /* OAuth */,
 				514F2FE91DF09E3B00846163 /* Main */,
 				514F2FE61DF09E3B00846163 /* Home */,
 				514F2FEC1DF09E3B00846163 /* Message */,
@@ -469,6 +496,7 @@
 				514F300D1DF1FA6D00846163 /* LSTempViewController.swift in Sources */,
 				514F30051DF1DAD100846163 /* LSCommon.swift in Sources */,
 				514F30301DF3157400846163 /* Extension+UILable.swift in Sources */,
+				512DF2501DF434A4009A5B6E /* LSOAuthViewController.swift in Sources */,
 				514F30031DF1763F00846163 /* LSTabBar.swift in Sources */,
 				514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */,
 				512DF1961DF31A5C009A5B6E /* Extension+UIImageView.swift in Sources */,

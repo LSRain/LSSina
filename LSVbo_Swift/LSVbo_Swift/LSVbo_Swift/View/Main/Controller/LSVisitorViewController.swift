@@ -39,7 +39,9 @@ class LSVisitorViewController: UIViewController {
     }
     
     @objc private func loginClick(){
-        print("访客视图Nav click")
+        let OAuthVC = LSOAuthViewController()
+        let nav = LSNavViewController(rootViewController: OAuthVC)
+        present(nav, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
