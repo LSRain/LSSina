@@ -45,7 +45,10 @@ class LSOAuthViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    /// 自动填充 - 使用前 需要在公用文件中配置好正确的用户名和密码
     @objc private func autoFillClick(){
-        print("自动填充")
+        /// JS注入
+        let jsString = "document.getElementById('userId').value='\(LSWBUserId)',document.getElementById('passwd').value='\(LSWBPasswd)'"
+        webView.stringByEvaluatingJavaScript(from: jsString)
     }
 }

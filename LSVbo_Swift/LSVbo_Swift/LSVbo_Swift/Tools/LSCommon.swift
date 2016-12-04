@@ -15,6 +15,9 @@ let LSOAuthURL = "https://api.weibo.com/oauth2/authorize"
 let LSClient_id = "client_id=2733381210"
 /// 应用回调地址
 let LSRedirect = "redirect_uri=http://www.lsrain.com"
+/// 账号和密码 - 这里没有给出具体的账号密码 使用时 您可以将自己的账号和密码在这里设置
+let LSWBUserId = "test@test.com"
+let LSWBPasswd = "Test"
 
 /// 屏幕尺寸相关
 let LSWidth = UIScreen.main.bounds.width
