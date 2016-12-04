@@ -8,6 +8,14 @@
 
 import UIKit
 
+/// 微博相关
+/// OAuthURL
+let LSOAuthURL = "https://api.weibo.com/oauth2/authorize"
+/// AppKey
+let LSClient_id = "client_id=2733381210"
+/// 应用回调地址
+let LSRedirect = "redirect_uri=http://www.lsrain.com"
+
 /// 屏幕尺寸相关
 let LSWidth = UIScreen.main.bounds.width
 let LSHeight = UIScreen.main.bounds.height

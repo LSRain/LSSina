@@ -9,6 +9,10 @@
 import UIKit
 
 class LSOAuthViewController: UIViewController {
+    
+    override func loadView() {
+        view = webView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,16 @@ class LSOAuthViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", target: self, action: #selector(autoFillClick))
         navigationItem.title = "微博登录"
     }
+    
+    /// WebView
+    private lazy var webView: UIWebView = {
+       
+        let url = URL(string: "\(LSOAuthURL)?\(LSClient_id)&\(LSRedirect)")
+        let request = URLRequest(url: url!)
+        let view = UIWebView()
+        view.loadRequest(request)
+        return view
+    }()
     
     @objc private func cancelClick(){
         dismiss(animated: true, completion: nil)
