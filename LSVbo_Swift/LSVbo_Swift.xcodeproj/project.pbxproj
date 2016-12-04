@@ -38,9 +38,11 @@
 		514F302D1DF311B900846163 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30211DF311B900846163 /* View+SnapKit.swift */; };
 		514F302E1DF311B900846163 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F30221DF311B900846163 /* ViewController+SnapKit.swift */; };
 		514F30301DF3157400846163 /* Extension+UILable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F302F1DF3157400846163 /* Extension+UILable.swift */; };
+		CEC427D3AAB3C739DB353401 /* Pods_LSVbo_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283CA517A183B3B6990E74A1 /* Pods_LSVbo_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283CA517A183B3B6990E74A1 /* Pods_LSVbo_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSVbo_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		512DF1951DF31A5C009A5B6E /* Extension+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
 		512DF24F1DF434A4009A5B6E /* LSOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSOAuthViewController.swift; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,8 @@
 		514F30211DF311B900846163 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		514F30221DF311B900846163 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
 		514F302F1DF3157400846163 /* Extension+UILable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UILable.swift"; sourceTree = "<group>"; };
+		7A0DCA7A3E30CA194B9A9785 /* Pods-LSVbo_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSVbo_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSVbo_Swift/Pods-LSVbo_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		A6112AF8E247DE97BF3DED9E /* Pods-LSVbo_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSVbo_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSVbo_Swift/Pods-LSVbo_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC427D3AAB3C739DB353401 /* Pods_LSVbo_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +122,8 @@
 			children = (
 				514F2FC91DF091EF00846163 /* LSVbo_Swift */,
 				514F2FC81DF091EF00846163 /* Products */,
+				E2FB2C9591A7C29DC636A05D /* Pods */,
+				994CB84891E170A41D119D0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -408,6 +415,23 @@
 			path = "SnapKit修改版";
 			sourceTree = "<group>";
 		};
+		994CB84891E170A41D119D0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				283CA517A183B3B6990E74A1 /* Pods_LSVbo_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2FB2C9591A7C29DC636A05D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6112AF8E247DE97BF3DED9E /* Pods-LSVbo_Swift.debug.xcconfig */,
+				7A0DCA7A3E30CA194B9A9785 /* Pods-LSVbo_Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,9 +439,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 514F2FD91DF091EF00846163 /* Build configuration list for PBXNativeTarget "LSVbo_Swift" */;
 			buildPhases = (
+				A7FB1FBE14DC8C3606E5F9FC /* [CP] Check Pods Manifest.lock */,
 				514F2FC31DF091EF00846163 /* Sources */,
 				514F2FC41DF091EF00846163 /* Frameworks */,
 				514F2FC51DF091EF00846163 /* Resources */,
+				876FA484EA456B31FF8AC9CE /* [CP] Embed Pods Frameworks */,
+				AA80B2A71C7C6AD0865AE543 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -473,6 +500,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		876FA484EA456B31FF8AC9CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSVbo_Swift/Pods-LSVbo_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7FB1FBE14DC8C3606E5F9FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA80B2A71C7C6AD0865AE543 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSVbo_Swift/Pods-LSVbo_Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		514F2FC31DF091EF00846163 /* Sources */ = {
@@ -610,6 +685,7 @@
 		};
 		514F2FDA1DF091EF00846163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6112AF8E247DE97BF3DED9E /* Pods-LSVbo_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -625,6 +701,7 @@
 		};
 		514F2FDB1DF091EF00846163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0DCA7A3E30CA194B9A9785 /* Pods-LSVbo_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

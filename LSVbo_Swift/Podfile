@@ -1,0 +1,17 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'LSVbo_Swift' do
+
+use_frameworks!
+
+# 网络框架
+pod 'AFNetworking'
+# 加载指示器
+pod 'SVProgressHUD'
+# 网络图片加载
+pod 'SDWebImage'
+# YYModel
+pod 'YYModel'
+
+end
