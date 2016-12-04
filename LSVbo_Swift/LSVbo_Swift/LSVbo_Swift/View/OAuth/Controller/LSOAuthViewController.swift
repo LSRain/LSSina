@@ -34,10 +34,11 @@ class LSOAuthViewController: UIViewController {
     /// WebView
     private lazy var webView: UIWebView = {
        
-        let url = URL(string: "\(LSOAuthURL)?\(LSClient_id)&\(LSRedirect)")
+        let url = URL(string: "\(LSOAuthURL)?client_id=\(LSClient_id)&redirect_uri=\(LSRedirect)")
         let request = URLRequest(url: url!)
         let view = UIWebView()
         view.loadRequest(request)
+        view.delegate = self
         return view
     }()
     
@@ -50,5 +51,26 @@ class LSOAuthViewController: UIViewController {
         /// JS注入
         let jsString = "document.getElementById('userId').value='\(LSWBUserId)',document.getElementById('passwd').value='\(LSWBPasswd)'"
         webView.stringByEvaluatingJavaScript(from: jsString)
+    }
+}
+
+/// extension - webView代理
+extension LSOAuthViewController: UIWebViewDelegate{
+    
+    /// webView代理方法 - 主要用来获取code
+    ///
+    /// - Parameters:
+    ///   - webView: webView
+    ///   - request: 请求
+    ///   - navigationType: navigationType
+    /// - Returns: 默认返回`true`
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        let URLString = request.url?.absoluteString
+        if let u = URLString, u.hasPrefix(LSRedirect) {
+            let query = request.url?.query
+            let code = query?.substring(from: "code=".endIndex) ?? ""
+            print("code = \(code)")
+        }
+        return true
     }
 }
