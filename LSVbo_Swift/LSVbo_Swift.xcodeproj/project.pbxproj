@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		512DF1961DF31A5C009A5B6E /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF1951DF31A5C009A5B6E /* Extension+UIImageView.swift */; };
 		512DF2501DF434A4009A5B6E /* LSOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF24F1DF434A4009A5B6E /* LSOAuthViewController.swift */; };
+		512DF2541DF47396009A5B6E /* LSNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2531DF47396009A5B6E /* LSNetworkTools.swift */; };
 		514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCA1DF091EF00846163 /* AppDelegate.swift */; };
 		514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCC1DF091EF00846163 /* ViewController.swift */; };
 		514F2FD21DF091EF00846163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514F2FD11DF091EF00846163 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		283CA517A183B3B6990E74A1 /* Pods_LSVbo_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSVbo_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		512DF1951DF31A5C009A5B6E /* Extension+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
 		512DF24F1DF434A4009A5B6E /* LSOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSOAuthViewController.swift; sourceTree = "<group>"; };
+		512DF2531DF47396009A5B6E /* LSNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNetworkTools.swift; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F2FCA1DF091EF00846163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514F2FCC1DF091EF00846163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		512DF2511DF472FF009A5B6E /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		512DF2521DF47396009A5B6E /* LSNetwork_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				512DF2531DF47396009A5B6E /* LSNetworkTools.swift */,
+			);
+			path = LSNetwork_Swift;
+			sourceTree = "<group>";
+		};
 		514F2FBE1DF091EF00846163 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +167,7 @@
 		514F2FDC1DF09E3B00846163 /* LSVbo_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				512DF2521DF47396009A5B6E /* LSNetwork_Swift */,
 				514F2FDF1DF09E3B00846163 /* View */,
 				514F2FF31DF09E3B00846163 /* ViewModel */,
 				514F2FDD1DF09E3B00846163 /* Model */,
@@ -161,6 +179,7 @@
 		514F2FDD1DF09E3B00846163 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				512DF2511DF472FF009A5B6E /* OAuth */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -560,6 +579,7 @@
 				514F30241DF311B900846163 /* ConstraintAttributes.swift in Sources */,
 				514F30131DF302B700846163 /* LSVisitorView.swift in Sources */,
 				514F30291DF311B900846163 /* Debugging.swift in Sources */,
+				512DF2541DF47396009A5B6E /* LSNetworkTools.swift in Sources */,
 				514F30261DF311B900846163 /* ConstraintItem.swift in Sources */,
 				514F2FF91DF1609D00846163 /* LSHomeViewController.swift in Sources */,
 				514F2FF71DF1608700846163 /* LSMainViewController.swift in Sources */,
