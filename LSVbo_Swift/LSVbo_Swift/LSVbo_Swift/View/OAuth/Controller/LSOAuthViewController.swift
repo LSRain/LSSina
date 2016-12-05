@@ -80,14 +80,7 @@ extension LSOAuthViewController: UIWebViewDelegate{
 extension LSOAuthViewController{
     
     func getUserAccount(code: String) -> Void {
-        let parames = [
-            "client_id": LSClient_id,
-            "client_secret": LSClient_secret,
-            "grant_type": "authorization_code",
-            "code": code,
-            "redirect_uri": LSRedirect
-        ]
-        LSNetworkTools.sharedTools.request(method: .post, URLString: LSTokenURL, parameters: parames, success: { (responseObject) in
+        LSNetworkTools.sharedTools.oauthLoadUserAccount(code: code, success: { (responseObject) in
             guard let res = responseObject as?[String: Any] else{
                 return
             }
@@ -102,11 +95,7 @@ extension LSOAuthViewController{
     }
     
     func getUserInfo(userModel: LSUserAccountModel) -> Void {
-        let parames = [
-            "access_token": userModel.access_token,
-            "uid": userModel.uid
-        ]
-        LSNetworkTools.sharedTools.request(method: .get, URLString: LSUserInfoURL, parameters: parames, success: { (responseObject) in
+        LSNetworkTools.sharedTools.oauthLoadUserInfo(userModel: userModel, success: { (responseObject) in
             guard let res = responseObject as?[String: Any] else{
                 return
             }
@@ -115,6 +104,7 @@ extension LSOAuthViewController{
             LSUserAccountViewModel.sharedAccount.saveAccountModel(model: userModel)
         }) { (error) in
             print("\(error)")
+
         }
     }
 }

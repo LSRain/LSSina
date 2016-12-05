@@ -56,23 +56,37 @@ class LSNetworkTools: AFHTTPSessionManager {
     }
 }
 
-/// 其他接口extension
+/// OAuth相关接口
 extension LSNetworkTools{
-
-    /// 天气请求接口
+    
+    /// OAuth加载`token`接口
     ///
     /// - Parameters:
-    ///   - cityName: 城市名称
-    ///   - success: 请求成功回调
-    ///   - failure: 失败回调
-    func loadWeather(cityName: String, success:@escaping (Any?)->(), failure:@escaping (Error)->()) -> Void {
-        
-        /// 假设 需传递的参数为城市名称
-        let dic = ["CityName": cityName]
-        request(method: .get, URLString: "http://www.weather.com.cn/data/sk/101010100.html", parameters: dic, success: { (resposeObject) in
-            success(resposeObject)
-        }) { (error) in
-            failure(error)
-        }
+    ///   - code: code
+    ///   - success: 成功的回调
+    ///   - failure: 失败的回调
+    func oauthLoadUserAccount(code: String, success:@escaping (Any?)->(), failure:@escaping (Error)->()){
+        let parames = [
+            "client_id": LSClient_id,
+            "client_secret": LSClient_secret,
+            "grant_type": "authorization_code",
+            "code": code,
+            "redirect_uri": LSRedirect
+        ]
+        request(method: .post, URLString: LSTokenURL, parameters: parames, success: success, failure: failure)
+    }
+    
+    /// OAuth加载用户信息接口
+    ///
+    /// - Parameters:
+    ///   - userModel: 用户模型
+    ///   - success: 成功的回调
+    ///   - failure: 失败的回调
+    func oauthLoadUserInfo(userModel: LSUserAccountModel, success:@escaping (Any?)->(), failure:@escaping (Error)->()){
+        let parames = [
+            "access_token": userModel.access_token,
+            "uid": userModel.uid
+        ]
+        request(method: .get, URLString: LSUserInfoURL, parameters: parames, success: success, failure: failure)
     }
 }
