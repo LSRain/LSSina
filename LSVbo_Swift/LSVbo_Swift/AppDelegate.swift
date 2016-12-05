@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = LSMainViewController()
         window?.makeKeyAndVisible()
         
+        print("\(LSUserAccountViewModel.sharedAccount.userAccount)")
         return true
     }
 
