@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension UIImageView{
     
@@ -16,5 +17,15 @@ extension UIImageView{
     convenience init(imageName: String){
         self.init(image: UIImage(named: imageName))
         
+    }
+    
+    /// 封装了`SDWebImage` - ls_setImage
+    ///
+    /// - Parameters:
+    ///   - withURLString: URL
+    ///   - placeholderImageName: placeholderImageName
+    func ls_setImage(withURLString: String!, placeholderImageName: String!){
+        let url = URL(string: withURLString)
+        sd_setImage(with: url, placeholderImage: UIImage(named: placeholderImageName))
     }
 }

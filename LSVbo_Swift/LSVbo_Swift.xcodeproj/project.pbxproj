@@ -12,6 +12,7 @@
 		512DF2541DF47396009A5B6E /* LSNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2531DF47396009A5B6E /* LSNetworkTools.swift */; };
 		512DF2561DF4740B009A5B6E /* LSUserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2551DF4740B009A5B6E /* LSUserAccountModel.swift */; };
 		512DF2591DF56DA4009A5B6E /* LSUserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2581DF56DA4009A5B6E /* LSUserAccountViewModel.swift */; };
+		512DF25D1DF5CEF0009A5B6E /* LSWellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF25C1DF5CEF0009A5B6E /* LSWellcomeViewController.swift */; };
 		514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCA1DF091EF00846163 /* AppDelegate.swift */; };
 		514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCC1DF091EF00846163 /* ViewController.swift */; };
 		514F2FD21DF091EF00846163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514F2FD11DF091EF00846163 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		512DF2531DF47396009A5B6E /* LSNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNetworkTools.swift; sourceTree = "<group>"; };
 		512DF2551DF4740B009A5B6E /* LSUserAccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserAccountModel.swift; sourceTree = "<group>"; };
 		512DF2581DF56DA4009A5B6E /* LSUserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserAccountViewModel.swift; sourceTree = "<group>"; };
+		512DF25C1DF5CEF0009A5B6E /* LSWellcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSWellcomeViewController.swift; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F2FCA1DF091EF00846163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514F2FCC1DF091EF00846163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,21 @@
 				512DF2581DF56DA4009A5B6E /* LSUserAccountViewModel.swift */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		512DF25A1DF5CED4009A5B6E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				512DF25C1DF5CEF0009A5B6E /* LSWellcomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		512DF25B1DF5CED4009A5B6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		514F2FBE1DF091EF00846163 = {
@@ -373,6 +390,8 @@
 		514F2FF21DF09E3B00846163 /* Wellcome */ = {
 			isa = PBXGroup;
 			children = (
+				512DF25A1DF5CED4009A5B6E /* Controller */,
+				512DF25B1DF5CED4009A5B6E /* View */,
 			);
 			path = Wellcome;
 			sourceTree = "<group>";
@@ -576,6 +595,7 @@
 				514F302C1DF311B900846163 /* SnapKit.swift in Sources */,
 				514F30241DF311B900846163 /* ConstraintAttributes.swift in Sources */,
 				514F30131DF302B700846163 /* LSVisitorView.swift in Sources */,
+				512DF25D1DF5CEF0009A5B6E /* LSWellcomeViewController.swift in Sources */,
 				514F30291DF311B900846163 /* Debugging.swift in Sources */,
 				512DF2541DF47396009A5B6E /* LSNetworkTools.swift in Sources */,
 				514F30261DF311B900846163 /* ConstraintItem.swift in Sources */,

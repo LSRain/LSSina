@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = LSMainViewController()
+//        window?.rootViewController = LSMainViewController()
+        /// 为方便测试 - 暂时将主控制器设置成欢迎页面
+        window?.rootViewController = LSWellcomeViewController()
         window?.makeKeyAndVisible()
         
         print("\(LSUserAccountViewModel.sharedAccount.userAccount)")
