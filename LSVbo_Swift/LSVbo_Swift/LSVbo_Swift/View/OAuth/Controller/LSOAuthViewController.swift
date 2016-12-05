@@ -70,41 +70,14 @@ extension LSOAuthViewController: UIWebViewDelegate{
         if let u = URLString, u.hasPrefix(LSRedirect) {
             let query = request.url?.query
             let code = query?.substring(from: "code=".endIndex) ?? ""
-            getUserAccount(code: code)
+            LSUserAccountViewModel.sharedAccount.getUserAccount(code: code, finish: { (isSuccess) in
+                if !isSuccess{
+                    print("数据请求失败！")
+                    return
+                }
+                print("数据请求成功")
+            })
         }
         return true
-    }
-}
-
-/// extension - 网络请求相关接口
-extension LSOAuthViewController{
-    
-    func getUserAccount(code: String) -> Void {
-        LSNetworkTools.sharedTools.oauthLoadUserAccount(code: code, success: { (responseObject) in
-            guard let res = responseObject as?[String: Any] else{
-                return
-            }
-            let userAccountModel = LSUserAccountModel.yy_model(withJSON: res)
-            guard let model = userAccountModel else{
-                return
-            }
-            self.getUserInfo(userModel: model)
-        }) { (error) in
-            print("\(error)")
-        }
-    }
-    
-    func getUserInfo(userModel: LSUserAccountModel) -> Void {
-        LSNetworkTools.sharedTools.oauthLoadUserInfo(userModel: userModel, success: { (responseObject) in
-            guard let res = responseObject as?[String: Any] else{
-                return
-            }
-            userModel.screen_name = res["screen_name"] as? String
-            userModel.profile_image_url = res["profile_image_url"] as? String
-            LSUserAccountViewModel.sharedAccount.saveAccountModel(model: userModel)
-        }) { (error) in
-            print("\(error)")
-
-        }
     }
 }

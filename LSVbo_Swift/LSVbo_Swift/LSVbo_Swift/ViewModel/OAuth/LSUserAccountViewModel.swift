@@ -32,6 +32,53 @@ class LSUserAccountViewModel{
     private func getAccountModel()->LSUserAccountModel?{
         return NSKeyedUnarchiver.unarchiveObject(withFile: file) as? LSUserAccountModel
     }
+}
+
+/// 帮助VC处理网络请求
+extension LSUserAccountViewModel{
     
-   
+    /// 获取用户`token`
+    ///
+    /// - Parameters:
+    ///   - code: code
+    ///   - finish: 成功标记闭包
+    func getUserAccount(code: String, finish:@escaping (Bool)->()) -> Void {
+        LSNetworkTools.sharedTools.oauthLoadUserAccount(code: code, success: { (responseObject) in
+            guard let res = responseObject as?[String: Any] else{
+                finish(false)
+                return
+            }
+            let userAccountModel = LSUserAccountModel.yy_model(withJSON: res)
+            guard let model = userAccountModel else{
+                finish(false)
+                return
+            }
+            self.getUserInfo(userModel: model, finish: finish)
+        }) { (error) in
+            print("\(error)")
+            finish(false)
+        }
+    }
+    
+    /// 请求用户信息
+    ///
+    /// - Parameters:
+    ///   - userModel: 用户模型
+    ///   - finish: 成功标记闭包
+    func getUserInfo(userModel: LSUserAccountModel, finish:@escaping (Bool)->()) -> Void {
+        LSNetworkTools.sharedTools.oauthLoadUserInfo(userModel: userModel, success: { (responseObject) in
+            guard let res = responseObject as?[String: Any] else{
+                finish(false)
+                return
+            }
+            userModel.screen_name = res["screen_name"] as? String
+            userModel.profile_image_url = res["profile_image_url"] as? String
+            self.saveAccountModel(model: userModel)
+            /// 用户信息获取到才标识成功
+            finish(true)
+        }) { (error) in
+            print("\(error)")
+            finish(false)
+        }
+    }
 }
