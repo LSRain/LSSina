@@ -13,7 +13,8 @@ class LSUserAccountViewModel{
 
     static let sharedAccount: LSUserAccountViewModel = LSUserAccountViewModel()
     var userAccount: LSUserAccountModel?
-    /// 单独定义的token 用以标记是否过期
+    
+    /// 单独定义的`token` - 访问令牌 用以标记是否过期
     var access_token: String?{
         if userAccount?.expires_Date?.compare(Date()) == ComparisonResult.orderedDescending {
             /// 降序 - 说明没有过期
@@ -22,6 +23,10 @@ class LSUserAccountViewModel{
             /// 过期/没有登录 - 置为`nil`
             return nil
         }
+    }
+    /// 用户登录标记
+    var isLogin: Bool?{
+        return access_token != nil
     }
     
     /// 防止频繁调用沙盒影响性能 - 重写`init`

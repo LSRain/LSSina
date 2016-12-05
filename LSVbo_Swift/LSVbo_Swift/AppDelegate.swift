@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print("\(LSUserAccountViewModel.sharedAccount.userAccount)")
         print("\(LSUserAccountViewModel.sharedAccount.access_token)")
+        print("\(LSUserAccountViewModel.sharedAccount.isLogin)")
         return true
     }
 
