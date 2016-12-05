@@ -11,6 +11,7 @@
 		512DF2501DF434A4009A5B6E /* LSOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF24F1DF434A4009A5B6E /* LSOAuthViewController.swift */; };
 		512DF2541DF47396009A5B6E /* LSNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2531DF47396009A5B6E /* LSNetworkTools.swift */; };
 		512DF2561DF4740B009A5B6E /* LSUserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2551DF4740B009A5B6E /* LSUserAccountModel.swift */; };
+		512DF2591DF56DA4009A5B6E /* LSUserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2581DF56DA4009A5B6E /* LSUserAccountViewModel.swift */; };
 		514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCA1DF091EF00846163 /* AppDelegate.swift */; };
 		514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCC1DF091EF00846163 /* ViewController.swift */; };
 		514F2FD21DF091EF00846163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514F2FD11DF091EF00846163 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		512DF24F1DF434A4009A5B6E /* LSOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSOAuthViewController.swift; sourceTree = "<group>"; };
 		512DF2531DF47396009A5B6E /* LSNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNetworkTools.swift; sourceTree = "<group>"; };
 		512DF2551DF4740B009A5B6E /* LSUserAccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserAccountModel.swift; sourceTree = "<group>"; };
+		512DF2581DF56DA4009A5B6E /* LSUserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserAccountViewModel.swift; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F2FCA1DF091EF00846163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514F2FCC1DF091EF00846163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 				512DF2531DF47396009A5B6E /* LSNetworkTools.swift */,
 			);
 			path = LSNetwork_Swift;
+			sourceTree = "<group>";
+		};
+		512DF2571DF56D13009A5B6E /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				512DF2581DF56DA4009A5B6E /* LSUserAccountViewModel.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		514F2FBE1DF091EF00846163 = {
@@ -370,24 +380,9 @@
 		514F2FF31DF09E3B00846163 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				514F2FF41DF09E3B00846163 /* Controller */,
-				514F2FF51DF09E3B00846163 /* View */,
+				512DF2571DF56D13009A5B6E /* OAuth */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		514F2FF41DF09E3B00846163 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		514F2FF51DF09E3B00846163 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		514F30061DF1DF0A00846163 /* Extension */ = {
@@ -586,6 +581,7 @@
 				514F30261DF311B900846163 /* ConstraintItem.swift in Sources */,
 				514F2FF91DF1609D00846163 /* LSHomeViewController.swift in Sources */,
 				514F2FF71DF1608700846163 /* LSMainViewController.swift in Sources */,
+				512DF2591DF56DA4009A5B6E /* LSUserAccountViewModel.swift in Sources */,
 				514F2FFB1DF160B600846163 /* LSMessageViewController.swift in Sources */,
 				514F2FFF1DF160EB00846163 /* LSProfileViewController.swift in Sources */,
 				514F300A1DF1F1F800846163 /* Extension+UIBarButtonItem.swift in Sources */,

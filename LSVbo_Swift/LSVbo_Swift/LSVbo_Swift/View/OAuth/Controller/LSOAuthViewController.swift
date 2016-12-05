@@ -112,7 +112,9 @@ extension LSOAuthViewController{
             }
             userModel.screen_name = res["screen_name"] as? String
             userModel.profile_image_url = res["profile_image_url"] as? String
-            print("\(userModel)")
+            LSUserAccountViewModel.sharedAccount.saveAccountModel(model: userModel)
+            let model = LSUserAccountViewModel.sharedAccount.getAccountModel()
+            print("\(model)")
         }) { (error) in
             print("\(error)")
         }
