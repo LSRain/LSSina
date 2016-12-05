@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         print("\(LSUserAccountViewModel.sharedAccount.userAccount)")
+        print("\(LSUserAccountViewModel.sharedAccount.access_token)")
         return true
     }
 
