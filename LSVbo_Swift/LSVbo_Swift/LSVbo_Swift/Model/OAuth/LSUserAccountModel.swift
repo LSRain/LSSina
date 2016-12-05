@@ -17,11 +17,19 @@ class LSUserAccountModel: NSObject {
     /// 授权用户的UID
     var uid: String?
     
+    /// UserInfo
+    /// 用户昵称
+    var screen_name: String?
+    /// 用户头像地址（中图）50×50像素
+    var profile_image_url: String?
+    
     override var description: String{
         let keys = [
             "access_token",
             "expires_in",
-            "uid"
+            "uid",
+            "screen_name",
+            "profile_image_url"
         ]
         return dictionaryWithValues(forKeys: keys).description
     }

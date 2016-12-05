@@ -8,17 +8,19 @@
 
 import UIKit
 
-/// 微博相关
-/// OAuthURL
-let LSOAuthURL = "https://api.weibo.com/oauth2/authorize"
+/// 微博OAuth相关
 /// AppKey
 let LSClient_id = "2733381210"
 /// client_secret
 let LSClient_secret = "d30ed57da77dd0a69d873e2c41c43f69"
-/// 应用回调地址
+/// 应用回调URL
 let LSRedirect = "http://www.lsrain.com"
+/// OAuthURL
+let LSOAuthURL = "https://api.weibo.com/oauth2/authorize"
 /// token请求URL
 let LSTokenURL = "https://api.weibo.com/oauth2/access_token"
+/// 用户信息请求URL
+let LSUserInfoURL = "https://api.weibo.com/2/users/show.json"
 /// 账号和密码 - 这里没有给出具体的账号密码 使用时 您可以将自己的账号和密码在这里设置
 let LSWBUserId = "test@test.com"
 let LSWBPasswd = "Test"

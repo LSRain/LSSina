@@ -92,7 +92,27 @@ extension LSOAuthViewController{
                 return
             }
             let userAccountModel = LSUserAccountModel.yy_model(withJSON: res)
-            print("\(userAccountModel)")
+            guard let model = userAccountModel else{
+                return
+            }
+            self.getUserInfo(userModel: model)
+        }) { (error) in
+            print("\(error)")
+        }
+    }
+    
+    func getUserInfo(userModel: LSUserAccountModel) -> Void {
+        let parames = [
+            "access_token": userModel.access_token,
+            "uid": userModel.uid
+        ]
+        LSNetworkTools.sharedTools.request(method: .get, URLString: LSUserInfoURL, parameters: parames, success: { (responseObject) in
+            guard let res = responseObject as?[String: Any] else{
+                return
+            }
+            userModel.screen_name = res["screen_name"] as? String
+            userModel.profile_image_url = res["profile_image_url"] as? String
+            print("\(userModel)")
         }) { (error) in
             print("\(error)")
         }
