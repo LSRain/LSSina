@@ -13,6 +13,27 @@ class LSWellcomeViewController: UIViewController {
     override func loadView() {
         view = bgView
     }
+    
+    /// 控件加载完成 - 生命周期 设置阻尼动画
+    override func viewDidAppear(_ animated: Bool) {
+        iconView.snp_updateConstraints { (make) in
+            make.top.equalTo(view).offset(100)
+        }
+        /// 阻尼动画
+        /// - withDuration: 动画时长
+        /// - delay: 延迟时间
+        /// - usingSpringWithDamping: 阻尼系数 - 系数越小 弹性越大
+        /// - initialSpringVelocity: 起始加速度
+        UIView.animate(withDuration: 1, delay: 1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: [], animations: {
+            self.view.layoutIfNeeded()
+        }) { (_) in
+            /// 头像动画完成 - 显示lab
+            UIView.animate(withDuration: 0.25, animations: { 
+                self.messageLabel.alpha = 1
+            })
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,6 +75,7 @@ class LSWellcomeViewController: UIViewController {
     /// message
     private lazy var messageLabel: UILabel = {
         let lab = UILabel(text: "欢迎回来", fontSize: 18, textColor: LSThemeColor)
+        lab.alpha = 0
         return lab
     }()
 }
