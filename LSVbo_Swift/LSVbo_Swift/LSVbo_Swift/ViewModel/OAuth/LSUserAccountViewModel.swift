@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YYModel
 
 /// 自定义类 - 没有继承 `NSObject`
 class LSUserAccountViewModel{

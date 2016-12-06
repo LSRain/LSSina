@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import YYModel
+import SVProgressHUD
 
 class LSOAuthViewController: UIViewController {
     
@@ -44,6 +44,7 @@ class LSOAuthViewController: UIViewController {
     }()
     
     @objc private func cancelClick(){
+        SVProgressHUD.dismiss()
         dismiss(animated: true, completion: nil)
     }
     
@@ -72,7 +73,7 @@ extension LSOAuthViewController: UIWebViewDelegate{
             let code = query?.substring(from: "code=".endIndex) ?? ""
             LSUserAccountViewModel.sharedAccount.getUserAccount(code: code, finish: { (isSuccess) in
                 if !isSuccess{
-                    print("数据请求失败！")
+                    SVProgressHUD.showError(withStatus: "加载失败")
                     return
                 }
                 self.dismiss(animated: false, completion: { 
@@ -83,5 +84,19 @@ extension LSOAuthViewController: UIWebViewDelegate{
             return false
         }
         return true
+    }
+    
+    /// 开始加载webView
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        SVProgressHUD.show()
+    }
+    
+    /// 加载结束
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        SVProgressHUD.dismiss()
+    }
+    
+    /// 加载错误 - 暂时不对其进行拦截
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
     }
 }
