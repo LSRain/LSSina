@@ -25,6 +25,8 @@ let LSOAuthURL = "https://api.weibo.com/oauth2/authorize"
 let LSTokenURL = "https://api.weibo.com/oauth2/access_token"
 /// 用户信息请求URL
 let LSUserInfoURL = "https://api.weibo.com/2/users/show.json"
+/// 获取当前登录用户及其所关注（授权）用户的最新微博URL
+let LSFriendURL = "https://api.weibo.com/2/statuses/friends_timeline.json"
 /// 账号和密码 - 这里没有给出具体的账号密码 使用时 您可以将自己的账号和密码在这里设置
 let LSWBUserId = "test@test.com"
 let LSWBPasswd = "Test"
