@@ -18,15 +18,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = LSMainViewController()
-        /// 为方便测试 - 暂时将主控制器设置成欢迎页面
-        window?.rootViewController = LSWellcomeViewController()
+        setupRootVC()
+        NotificationCenter.default.addObserver(self, selector: #selector(switchRootViewController(noti:)), name: NSNotification.Name(rawValue: LSSWITCHROOTVCNOTI), object: nil)
         window?.makeKeyAndVisible()
-        
-        print("\(LSUserAccountViewModel.sharedAccount.userAccount)")
-        print("\(LSUserAccountViewModel.sharedAccount.access_token)")
-        print("\(LSUserAccountViewModel.sharedAccount.isLogin)")
         return true
+    }
+    
+    /// 设置根控制器
+    /// - 用户已经授权过登录 则启动时rootVC为`LSWellcomeViewController`
+    func setupRootVC() -> Void {
+        if LSUserAccountViewModel.sharedAccount.isLogin {
+            window?.rootViewController = LSWellcomeViewController()
+            return
+        }
+        window?.rootViewController = LSMainViewController()
+    }
+    
+    /// 切换根控制器
+    ///
+    /// - Parameter noti: 通知参数 - `nil`: 授权后通知 - `welcom`: 欢迎页加载完成后通知
+    func switchRootViewController(noti: Notification){
+        if noti.object == nil {
+            /// 说明是授权完成通知
+            window?.rootViewController = LSWellcomeViewController()
+        }else{
+            /// 首页加载完成通知 - 附带参数
+            window?.rootViewController = LSMainViewController()
+        }
+    }
+    
+    /// 析构函数 - 销毁通知 `谁接收 谁销毁`
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -75,8 +75,12 @@ extension LSOAuthViewController: UIWebViewDelegate{
                     print("数据请求失败！")
                     return
                 }
-                print("数据请求成功")
+                self.dismiss(animated: false, completion: { 
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: LSSWITCHROOTVCNOTI), object: nil)
+                })
             })
+            /// 用户信息得到后 - 不再发送网络请求
+            return false
         }
         return true
     }

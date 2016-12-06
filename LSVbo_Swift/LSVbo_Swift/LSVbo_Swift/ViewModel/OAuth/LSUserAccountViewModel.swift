@@ -25,7 +25,7 @@ class LSUserAccountViewModel{
         }
     }
     /// 用户登录标记
-    var isLogin: Bool?{
+    var isLogin: Bool{
         return access_token != nil
     }
     

@@ -28,8 +28,11 @@ class LSWellcomeViewController: UIViewController {
             self.view.layoutIfNeeded()
         }) { (_) in
             /// 头像动画完成 - 显示lab
-            UIView.animate(withDuration: 0.25, animations: { 
+            UIView.animate(withDuration: 0.25, animations: {
                 self.messageLabel.alpha = 1
+            }, completion: { (_) in
+              /// 动画展示完成后发送通知 - 切换到首页控制器 `已登录`
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: LSSWITCHROOTVCNOTI), object: "welcome")
             })
         }
     }

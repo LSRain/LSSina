@@ -8,6 +8,10 @@
 
 import UIKit
 
+/// 通知相关
+/// 切换控制器通知
+let LSSWITCHROOTVCNOTI = "LSSWITCHROOTVCNOTI"
+
 /// 微博OAuth相关
 /// AppKey
 let LSClient_id = "2733381210"
