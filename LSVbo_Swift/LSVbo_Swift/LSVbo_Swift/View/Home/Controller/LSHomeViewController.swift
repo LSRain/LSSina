@@ -18,7 +18,7 @@ class LSHomeViewController: LSVisitorViewController {
         super.viewDidLoad()
         print("\(tableView.frame)")
         setupUI()
-        setupTableView()
+        setupTableViewInfo()
     }
     
     func setupUI() -> Void {
@@ -39,11 +39,6 @@ class LSHomeViewController: LSVisitorViewController {
         }
     }
     
-    func setupTableView() -> Void {
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellHomeStatusesIdentifier)
-    }
-    
     @objc private func leftBarButtonClick() -> Void {
         print("leftClick")
     }
@@ -53,6 +48,14 @@ class LSHomeViewController: LSVisitorViewController {
         pushVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(pushVC, animated: true)
     }
+    
+    /// `tab`相关信息设置
+    func setupTableViewInfo() -> Void {
+        tableView.dataSource = self
+        tableView.register(LSHomeTableViewCell.self, forCellReuseIdentifier: cellHomeStatusesIdentifier)
+        tableView.rowHeight = 300
+    }
+    
 
 }
 
@@ -63,7 +66,7 @@ extension LSHomeViewController: UITableViewDataSource{
         return dataArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellHomeStatusesIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellHomeStatusesIdentifier, for: indexPath) as! LSHomeTableViewCell
         cell.textLabel?.text = dataArray[indexPath.row].text
         cell.backgroundColor = LSRandomColor()
         return cell
@@ -85,6 +88,7 @@ extension LSHomeViewController{
             guard let resArr = resDic["statuses"] as? [[String: Any]] else{
                 return
             }
+            
             let statusesArray = NSArray.yy_modelArray(with: LSStatusesModel.self, json: resArr) as! [LSStatusesModel]
             /// 回调闭包
             callBack(statusesArray)

@@ -14,6 +14,7 @@
 		512DF2591DF56DA4009A5B6E /* LSUserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2581DF56DA4009A5B6E /* LSUserAccountViewModel.swift */; };
 		512DF25D1DF5CEF0009A5B6E /* LSWellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF25C1DF5CEF0009A5B6E /* LSWellcomeViewController.swift */; };
 		512DF2601DF7098C009A5B6E /* LSStatusesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF25F1DF7098C009A5B6E /* LSStatusesModel.swift */; };
+		512DF28B1DF8179B009A5B6E /* LSHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF28A1DF8179B009A5B6E /* LSHomeTableViewCell.swift */; };
 		514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCA1DF091EF00846163 /* AppDelegate.swift */; };
 		514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCC1DF091EF00846163 /* ViewController.swift */; };
 		514F2FD21DF091EF00846163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514F2FD11DF091EF00846163 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		512DF2581DF56DA4009A5B6E /* LSUserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserAccountViewModel.swift; sourceTree = "<group>"; };
 		512DF25C1DF5CEF0009A5B6E /* LSWellcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSWellcomeViewController.swift; sourceTree = "<group>"; };
 		512DF25F1DF7098C009A5B6E /* LSStatusesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSStatusesModel.swift; sourceTree = "<group>"; };
+		512DF28A1DF8179B009A5B6E /* LSHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSHomeTableViewCell.swift; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F2FCA1DF091EF00846163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514F2FCC1DF091EF00846163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		514F2FE81DF09E3B00846163 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				512DF28A1DF8179B009A5B6E /* LSHomeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				514F30261DF311B900846163 /* ConstraintItem.swift in Sources */,
 				514F2FF91DF1609D00846163 /* LSHomeViewController.swift in Sources */,
 				514F2FF71DF1608700846163 /* LSMainViewController.swift in Sources */,
+				512DF28B1DF8179B009A5B6E /* LSHomeTableViewCell.swift in Sources */,
 				512DF2591DF56DA4009A5B6E /* LSUserAccountViewModel.swift in Sources */,
 				514F2FFB1DF160B600846163 /* LSMessageViewController.swift in Sources */,
 				514F2FFF1DF160EB00846163 /* LSProfileViewController.swift in Sources */,
