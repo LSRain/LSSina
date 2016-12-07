@@ -16,6 +16,7 @@
 		512DF2601DF7098C009A5B6E /* LSStatusesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF25F1DF7098C009A5B6E /* LSStatusesModel.swift */; };
 		512DF28B1DF8179B009A5B6E /* LSHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF28A1DF8179B009A5B6E /* LSHomeTableViewCell.swift */; };
 		512DF28D1DF86E4B009A5B6E /* LSStatusOriginalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF28C1DF86E4B009A5B6E /* LSStatusOriginalView.swift */; };
+		512DF2941DF89A50009A5B6E /* LSStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2931DF89A50009A5B6E /* LSStatusListViewModel.swift */; };
 		514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCA1DF091EF00846163 /* AppDelegate.swift */; };
 		514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCC1DF091EF00846163 /* ViewController.swift */; };
 		514F2FD21DF091EF00846163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514F2FD11DF091EF00846163 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		512DF25F1DF7098C009A5B6E /* LSStatusesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSStatusesModel.swift; sourceTree = "<group>"; };
 		512DF28A1DF8179B009A5B6E /* LSHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSHomeTableViewCell.swift; sourceTree = "<group>"; };
 		512DF28C1DF86E4B009A5B6E /* LSStatusOriginalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSStatusOriginalView.swift; sourceTree = "<group>"; };
+		512DF2931DF89A50009A5B6E /* LSStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSStatusListViewModel.swift; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F2FCA1DF091EF00846163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514F2FCC1DF091EF00846163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,14 @@
 			isa = PBXGroup;
 			children = (
 				512DF25F1DF7098C009A5B6E /* LSStatusesModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		512DF28E1DF89972009A5B6E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				512DF2931DF89A50009A5B6E /* LSStatusListViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -416,6 +426,7 @@
 		514F2FF31DF09E3B00846163 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				512DF28E1DF89972009A5B6E /* Home */,
 				512DF2571DF56D13009A5B6E /* OAuth */,
 			);
 			path = ViewModel;
@@ -610,6 +621,7 @@
 				514F30231DF311B900846163 /* Constraint.swift in Sources */,
 				514F30271DF311B900846163 /* ConstraintMaker.swift in Sources */,
 				514F302C1DF311B900846163 /* SnapKit.swift in Sources */,
+				512DF2941DF89A50009A5B6E /* LSStatusListViewModel.swift in Sources */,
 				514F30241DF311B900846163 /* ConstraintAttributes.swift in Sources */,
 				514F30131DF302B700846163 /* LSVisitorView.swift in Sources */,
 				512DF25D1DF5CEF0009A5B6E /* LSWellcomeViewController.swift in Sources */,

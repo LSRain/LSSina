@@ -11,12 +11,12 @@ import UIKit
 private let cellHomeStatusesIdentifier = "cellHomeStatusesIdentifier"
 class LSHomeViewController: LSVisitorViewController {
 
-    /// 首页微博数据模型数组
-    var dataArray:[LSStatusesModel] = [LSStatusesModel]()
+    /// 委托`viewModel`处理网络数据 - 请求和保存
+    let lsStatusListViewModel = LSStatusListViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(tableView.frame)")
         setupUI()
         setupTableViewInfo()
     }
@@ -30,13 +30,7 @@ class LSHomeViewController: LSVisitorViewController {
         }
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop", target: self, action: #selector(leftBarButtonClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendsearch", target: self, action: #selector(rightBarButtonClick))
-        
-        /// 请求数据
-        getStatusesData { (resultArray) in
-            self.dataArray = resultArray
-            /// 数据请求成功后刷新`tab`数据源
-            self.tableView.reloadData()
-        }
+        getStatusesData()
     }
     
     @objc private func leftBarButtonClick() -> Void {
@@ -61,11 +55,10 @@ class LSHomeViewController: LSVisitorViewController {
 extension LSHomeViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
+        return lsStatusListViewModel.dataArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellHomeStatusesIdentifier, for: indexPath) as! LSHomeTableViewCell
-//        cell.textLabel?.text = dataArray[indexPath.row].text
         return cell
     }
     
@@ -74,22 +67,13 @@ extension LSHomeViewController: UITableViewDataSource{
 /// 网络请求相关extention
 extension LSHomeViewController{
     /// 请求首页数据 - 获取当前登录用户及其所关注（授权）用户的最新微博
-    fileprivate func getStatusesData(callBack:@escaping ([LSStatusesModel])->()) -> Void {
-        LSNetworkTools.sharedTools.loadHomeData(success: { (responseObject) in
-            /// 判断是否能够转成字典
-            guard let resDic = responseObject as? [String: Any] else{
+    fileprivate func getStatusesData() -> Void {
+        lsStatusListViewModel.loadHomdData { (isSuccess) in
+            if !isSuccess{
+                print("数据请求失败！请检查网络配置")
                 return
             }
-            /// 判断是否能够转成数组
-            guard let resArr = resDic["statuses"] as? [[String: Any]] else{
-                return
-            }
-            
-            let statusesArray = NSArray.yy_modelArray(with: LSStatusesModel.self, json: resArr) as! [LSStatusesModel]
-            /// 回调闭包
-            callBack(statusesArray)
-        }, failure: { (error) in
-            print(error)
-        })
+            self.tableView.reloadData()
+        }
     }
 }
