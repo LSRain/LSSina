@@ -26,5 +26,13 @@ class LSHomeTableViewCell: UITableViewCell {
 
     private func setupUI(){
         backgroundColor = LSRandomColor()
+        contentView.addSubview(originalView)
+        originalView.snp_makeConstraints { (make) in
+            make.left.top.right.equalTo(contentView)
+            make.height.equalTo(100)
+        }
     }
+    
+    /// 原创微博
+    private lazy var originalView: LSStatusOriginalView = LSStatusOriginalView()
 }

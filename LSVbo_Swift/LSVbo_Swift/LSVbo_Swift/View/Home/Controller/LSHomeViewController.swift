@@ -55,8 +55,6 @@ class LSHomeViewController: LSVisitorViewController {
         tableView.register(LSHomeTableViewCell.self, forCellReuseIdentifier: cellHomeStatusesIdentifier)
         tableView.rowHeight = 300
     }
-    
-
 }
 
 /// `tab`数据源方法相关
@@ -67,8 +65,7 @@ extension LSHomeViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellHomeStatusesIdentifier, for: indexPath) as! LSHomeTableViewCell
-        cell.textLabel?.text = dataArray[indexPath.row].text
-        cell.backgroundColor = LSRandomColor()
+//        cell.textLabel?.text = dataArray[indexPath.row].text
         return cell
     }
     
