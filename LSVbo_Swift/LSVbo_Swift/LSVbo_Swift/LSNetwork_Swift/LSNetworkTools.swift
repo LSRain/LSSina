@@ -56,6 +56,15 @@ class LSNetworkTools: AFHTTPSessionManager {
     }
 }
 
+/// 首页数据请求相关接口
+extension LSNetworkTools{
+
+    func loadHomeData(success:@escaping (Any?)->(), failure:@escaping (Error)->()) -> Void {
+        let parames = ["access_token": LSUserAccountViewModel.sharedAccount.userAccount?.access_token]
+        request(method: .get, URLString: LSFriendURL, parameters: parames, success: success, failure: failure)
+    }
+}
+
 /// OAuth相关接口
 extension LSNetworkTools{
     

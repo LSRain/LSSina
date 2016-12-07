@@ -75,8 +75,7 @@ extension LSHomeViewController: UITableViewDataSource{
 extension LSHomeViewController{
     /// 请求首页数据 - 获取当前登录用户及其所关注（授权）用户的最新微博
     fileprivate func getStatusesData(callBack:@escaping ([LSStatusesModel])->()) -> Void {
-        let parames = ["access_token": LSUserAccountViewModel.sharedAccount.userAccount?.access_token]
-        LSNetworkTools.sharedTools.request(method: .get, URLString: LSFriendURL, parameters: parames, success: { (responseObject) in
+        LSNetworkTools.sharedTools.loadHomeData(success: { (responseObject) in
             /// 判断是否能够转成字典
             guard let resDic = responseObject as? [String: Any] else{
                 return
@@ -89,8 +88,8 @@ extension LSHomeViewController{
             let statusesArray = NSArray.yy_modelArray(with: LSStatusesModel.self, json: resArr) as! [LSStatusesModel]
             /// 回调闭包
             callBack(statusesArray)
-        }) { (error) in
+        }, failure: { (error) in
             print(error)
-        }
+        })
     }
 }
