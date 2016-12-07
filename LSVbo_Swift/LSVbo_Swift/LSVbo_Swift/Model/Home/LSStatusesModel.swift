@@ -21,13 +21,23 @@ class LSStatusesModel: NSObject {
     /// 会员等级 1-6
     var mbrank: Int = 0
     
+    /// 创建时间
+    var created_at: String?
+    /// 微博来源
+    var source: String?
+    /// 微博信息内容
+    var text: String?
+    
     override var description: String{
         let keys = [
             "id",
             "name",
             "profile_image_url",
             "verified",
-            "mbrank"
+            "mbrank",
+            "created_at",
+            "source",
+            "text"
         ]
         return dictionaryWithValues(forKeys: keys).description
     }

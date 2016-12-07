@@ -8,6 +8,7 @@
 
 import UIKit
 
+private let cellHomeStatusesIdentifier = "cellHomeStatusesIdentifier"
 class LSHomeViewController: LSVisitorViewController {
 
     /// 首页微博数据模型数组
@@ -15,7 +16,9 @@ class LSHomeViewController: LSVisitorViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("\(tableView.frame)")
         setupUI()
+        setupTableView()
     }
     
     func setupUI() -> Void {
@@ -31,8 +34,14 @@ class LSHomeViewController: LSVisitorViewController {
         /// 请求数据
         getStatusesData { (resultArray) in
             self.dataArray = resultArray
-            print("\(self.dataArray)")
+            /// 数据请求成功后刷新`tab`数据源
+            self.tableView.reloadData()
         }
+    }
+    
+    func setupTableView() -> Void {
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellHomeStatusesIdentifier)
     }
     
     @objc private func leftBarButtonClick() -> Void {
@@ -47,6 +56,22 @@ class LSHomeViewController: LSVisitorViewController {
 
 }
 
+/// `tab`数据源方法相关
+extension LSHomeViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellHomeStatusesIdentifier, for: indexPath)
+        cell.textLabel?.text = dataArray[indexPath.row].text
+        cell.backgroundColor = LSRandomColor()
+        return cell
+    }
+    
+}
+
+/// 网络请求相关extention
 extension LSHomeViewController{
     /// 请求首页数据 - 获取当前登录用户及其所关注（授权）用户的最新微博
     fileprivate func getStatusesData(callBack:@escaping ([LSStatusesModel])->()) -> Void {

@@ -15,7 +15,7 @@ class LSVisitorViewController: UIViewController {
     
     override func loadView() {
         if isLogin {
-            super.loadView()
+            view = tableView
         } else{
             setupVisitView()
         }
@@ -46,7 +46,8 @@ class LSVisitorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+    
+    lazy var tableView: UITableView = UITableView()
 
 }
