@@ -15,6 +15,7 @@ class LSStatusOriginalView: UIView {
         didSet{
             iconImageView.ls_setImage(withURLString: statusViewModel?.statusModel?.user?.profile_image_url, placeholderImageName: "avatar_default")
             nameLable.text = statusViewModel?.statusModel?.user?.name
+            membershipImageView.image = statusViewModel?.mbRankImage
         }
     }
 
