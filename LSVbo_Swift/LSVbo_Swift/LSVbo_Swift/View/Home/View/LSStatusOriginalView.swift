@@ -17,6 +17,7 @@ class LSStatusOriginalView: UIView {
             nameLable.text = statusViewModel?.statusModel?.user?.name
             membershipImageView.image = statusViewModel?.mbRankImage
             avatarImageView.image = statusViewModel?.verifiedImage
+            contentText.text = statusViewModel?.statusModel?.text
         }
     }
 
@@ -37,6 +38,7 @@ class LSStatusOriginalView: UIView {
         addSubview(timeLable)
         addSubview(sourceLable)
         addSubview(avatarImageView)
+        addSubview(contentText)
         
         iconImageView.snp_makeConstraints { (make) in
             make.size.equalTo(CGSize(width: 35, height: 35))
@@ -62,6 +64,14 @@ class LSStatusOriginalView: UIView {
             make.centerX.equalTo(iconImageView.snp_right)
             make.centerY.equalTo(iconImageView.snp_bottom)
         }
+        contentText.snp_makeConstraints { (make) in
+            make.top.equalTo(iconImageView.snp_bottom).offset(10)
+            make.left.equalTo(iconImageView)
+        }
+        /// 为了增强可读性 - `原创微博视图`的底部约束在这里使用self约束 也可以用`内容`约束
+        self.snp_makeConstraints { (make) in
+            make.bottom.equalTo(contentText).offset(10)
+        }
     }
     
     private lazy var iconImageView: UIImageView = UIImageView(imageName: "avatar_default")
@@ -73,5 +83,5 @@ class LSStatusOriginalView: UIView {
     private lazy var sourceLable: UILabel = UILabel(text: "LSSina", fontSize: LSFontSmallSize, textColor: LSThemeColor)
     /// 认证
     private lazy var avatarImageView: UIImageView = UIImageView(imageName: "avatar_vgirl")
-    
+    private lazy var contentText: UILabel = UILabel(text: "Hi, i'm Ls.R; Hi, i'm Ls.R; Hi, i'm Ls.R; Hi, i'm Ls.R; Hi, i'm Ls.R; Hi, i'm Ls.R; Hi, i'm Ls.R; Hi, i'm Ls.R; ", fontSize: LSFontNormalSize, textColor: UIColor.black, maxWidth: LSWidth - 20)
 }

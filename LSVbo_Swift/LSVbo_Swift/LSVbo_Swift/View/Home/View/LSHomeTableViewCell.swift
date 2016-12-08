@@ -35,7 +35,7 @@ class LSHomeTableViewCell: UITableViewCell {
         contentView.addSubview(originalView)
         originalView.snp_makeConstraints { (make) in
             make.left.top.right.equalTo(contentView)
-            make.height.equalTo(100)
+            /// 此处`originalView`的高度约束在`LSStatusOriginalView`中约束得出
         }
     }
     
