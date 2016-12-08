@@ -39,6 +39,7 @@ class LSHomeTableViewCell: UITableViewCell {
             make.left.top.right.equalTo(contentView)
         }
         statusBottomView.snp_makeConstraints { (make) in
+            make.top.equalTo(originalView.snp_bottom)
             make.left.bottom.right.equalTo(contentView)
             make.height.equalTo(35)
         }

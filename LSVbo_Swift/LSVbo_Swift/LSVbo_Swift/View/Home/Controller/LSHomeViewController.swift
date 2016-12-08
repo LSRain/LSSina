@@ -46,7 +46,9 @@ class LSHomeViewController: LSVisitorViewController {
     func setupTableViewInfo() -> Void {
         tableView.dataSource = self
         tableView.register(LSHomeTableViewCell.self, forCellReuseIdentifier: cellHomeStatusesIdentifier)
-        tableView.rowHeight = 300
+        /// cell使用预估行高
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 300
     }
 }
 
