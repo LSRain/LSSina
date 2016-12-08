@@ -9,8 +9,8 @@
 import UIKit
 
 class LSStatusListViewModel: NSObject {
-    /// 首页微博数据模型数组
-    var dataArray:[LSStatusesModel] = [LSStatusesModel]()
+    /// 首页微博数据`viewModel`数组
+    var dataArray:[LSStatusViewModel] = [LSStatusViewModel]()
 }
 
 /// 首页处理网络数据接口
@@ -18,7 +18,6 @@ extension LSStatusListViewModel{
 
     /// 请求首页数据 - 获取当前登录用户及其所关注（授权）用户的最新微博
     func loadHomdData(finish:@escaping (Bool)->()) -> Void {
-        
         LSNetworkTools.sharedTools.loadHomeData(success: { (responseObject) in
             /// 判断是否能够转成字典
             guard let resDic = responseObject as? [String: Any] else{
@@ -32,7 +31,13 @@ extension LSStatusListViewModel{
             }
             
             let statusesArray = NSArray.yy_modelArray(with: LSStatusesModel.self, json: resArr) as! [LSStatusesModel]
-            self.dataArray = statusesArray
+            var tempArray: [LSStatusViewModel] = [LSStatusViewModel]()
+            for model in statusesArray{
+                let lsStatusViewModel = LSStatusViewModel()
+                lsStatusViewModel.statusModel = model
+                tempArray.append(lsStatusViewModel)
+            }
+            self.dataArray = tempArray
             finish(true)
         }, failure: { (error) in
             print(error)
