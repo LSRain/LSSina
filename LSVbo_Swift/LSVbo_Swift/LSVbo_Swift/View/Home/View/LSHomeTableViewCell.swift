@@ -33,12 +33,19 @@ class LSHomeTableViewCell: UITableViewCell {
     private func setupUI(){
         backgroundColor = LSRandomColor()
         contentView.addSubview(originalView)
+        contentView.addSubview(statusBottomView)
+        
         originalView.snp_makeConstraints { (make) in
             make.left.top.right.equalTo(contentView)
-            /// 此处`originalView`的高度约束在`LSStatusOriginalView`中约束得出
+        }
+        statusBottomView.snp_makeConstraints { (make) in
+            make.left.bottom.right.equalTo(contentView)
+            make.height.equalTo(35)
         }
     }
     
     /// 原创微博
     private lazy var originalView: LSStatusOriginalView = LSStatusOriginalView()
+    /// 底部视图
+    private lazy var statusBottomView: LSStatusBottomView = LSStatusBottomView()
 }
