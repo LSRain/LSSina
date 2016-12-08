@@ -9,6 +9,12 @@
 import UIKit
 
 class LSHomeTableViewCell: UITableViewCell {
+    
+    var statusViewModel: LSStatusViewModel?{
+        didSet{
+            originalView.statusViewModel = statusViewModel
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

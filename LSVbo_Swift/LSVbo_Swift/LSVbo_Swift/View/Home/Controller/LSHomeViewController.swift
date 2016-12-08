@@ -14,7 +14,6 @@ class LSHomeViewController: LSVisitorViewController {
     /// 委托`viewModel`处理网络数据 - 请求和保存
     let lsStatusListViewModel = LSStatusListViewModel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -59,9 +58,9 @@ extension LSHomeViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellHomeStatusesIdentifier, for: indexPath) as! LSHomeTableViewCell
+        cell.statusViewModel = lsStatusListViewModel.dataArray[indexPath.row]
         return cell
     }
-    
 }
 
 /// 网络请求相关extention

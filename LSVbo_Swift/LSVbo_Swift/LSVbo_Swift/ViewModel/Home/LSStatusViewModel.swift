@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// `view级别`的viweModel
+/// `view级别`的viweModel - 管理模型
 class LSStatusViewModel: NSObject {
     
     var statusModel: LSStatusesModel?
