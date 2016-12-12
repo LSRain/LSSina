@@ -20,6 +20,7 @@
 		512DF2BC1DF96682009A5B6E /* LSStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2BB1DF96682009A5B6E /* LSStatusViewModel.swift */; };
 		512DF2BE1DF9967D009A5B6E /* LSUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2BD1DF9967D009A5B6E /* LSUserModel.swift */; };
 		512DF2C01DF9D549009A5B6E /* LSStatusBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2BF1DF9D549009A5B6E /* LSStatusBottomView.swift */; };
+		512DF2C21DF9F280009A5B6E /* LSStatusRetweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2C11DF9F280009A5B6E /* LSStatusRetweetView.swift */; };
 		514F2FCB1DF091EF00846163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCA1DF091EF00846163 /* AppDelegate.swift */; };
 		514F2FCD1DF091EF00846163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F2FCC1DF091EF00846163 /* ViewController.swift */; };
 		514F2FD21DF091EF00846163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514F2FD11DF091EF00846163 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		512DF2BB1DF96682009A5B6E /* LSStatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSStatusViewModel.swift; sourceTree = "<group>"; };
 		512DF2BD1DF9967D009A5B6E /* LSUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserModel.swift; sourceTree = "<group>"; };
 		512DF2BF1DF9D549009A5B6E /* LSStatusBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSStatusBottomView.swift; sourceTree = "<group>"; };
+		512DF2C11DF9F280009A5B6E /* LSStatusRetweetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSStatusRetweetView.swift; sourceTree = "<group>"; };
 		514F2FC71DF091EF00846163 /* LSVbo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSVbo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514F2FCA1DF091EF00846163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514F2FCC1DF091EF00846163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				512DF28A1DF8179B009A5B6E /* LSHomeTableViewCell.swift */,
 				512DF28C1DF86E4B009A5B6E /* LSStatusOriginalView.swift */,
 				512DF2BF1DF9D549009A5B6E /* LSStatusBottomView.swift */,
+				512DF2C11DF9F280009A5B6E /* LSStatusRetweetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				514F30081DF1DF1F00846163 /* Extension+UIButton.swift in Sources */,
 				514F30251DF311B900846163 /* ConstraintDescription.swift in Sources */,
 				512DF2601DF7098C009A5B6E /* LSStatusesModel.swift in Sources */,
+				512DF2C21DF9F280009A5B6E /* LSStatusRetweetView.swift in Sources */,
 				514F302D1DF311B900846163 /* View+SnapKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

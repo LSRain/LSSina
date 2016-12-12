@@ -21,6 +21,9 @@ class LSStatusesModel: NSObject {
     /// 用户模型
     var user: LSUserModel?
     
+    /// 转发微博 - 和tatuses平级
+    var retweeted_status: LSStatusesModel?
+    
     override var description: String{
         let keys = [
             "created_at",
